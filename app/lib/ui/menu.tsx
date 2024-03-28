@@ -1,20 +1,22 @@
 'use client';
+import Image from "next/image";
 import { Tabs, Tab } from '@nextui-org/react';
-import Hi from './hi';
-import Systems from './systems';
-import Notes from './notes';
+import Systems from "./systems";
+import Notes from "./notes";
 
 export default function Menu() {
+
   return (
       <Tabs key='menu' variant='underlined' aria-label="menu">
-        <Tab key="hi" title="hi">
-            <Hi />
+        <Tab key="hello" title="hello">
+          <Image src="/about.jpeg" alt="about" className="rounded-full"
+            width={100} height={100}/>
         </Tab>
         <Tab key="systems" title="systems">
-            <Systems />
+          <Systems />
         </Tab>
         <Tab key="notes" title="notes">
-            <Notes />
+          <Notes />
         </Tab>
       </Tabs>
   );
