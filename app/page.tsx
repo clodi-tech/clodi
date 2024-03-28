@@ -1,7 +1,9 @@
+import Menu from "./lib/ui/menu";
+
 export default function Home() {
   return (
     <main>
-      home page
+      <Menu />
     </main>
   );
 }
