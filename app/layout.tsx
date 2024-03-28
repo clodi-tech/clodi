@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
+import { Rajdhani } from 'next/font/google';
 import { Providers } from './providers';
 import './globals.css';
 
@@ -9,7 +9,10 @@ import { Analytics } from '@vercel/analytics/react';
 import Header from "@/app/lib/ui/header";
 import Footer from "@/app/lib/ui/footer";
 
-const inter = Inter({ subsets: ['latin'] });
+const font = Rajdhani({ 
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700"]
+});
 
 export const metadata: Metadata = {
   title: 'liberOS',
@@ -23,7 +26,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang='en' className='dark'>
-      <body className={inter.className}>
+      <body className={font.className}>
         <Providers>
           <Header />
           {children}
