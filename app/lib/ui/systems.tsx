@@ -36,7 +36,7 @@ const systems = [
     {
         name: 'arcade',
         description: defaultContent,
-        link: 'https://lightime.vercel.app/',
+        link: 'https://libero-arcade.netlify.app/',
         logo: '/arcade.svg'
     },
     {
@@ -57,15 +57,15 @@ export default function Systems() {
                 </div>
                 {systems.map((system, index) => (
                     <Card key={index} className="max-w-sm">
-                        <CardHeader className="flex item-center gap-4">
-                            <Image src={system.logo} alt={system.name} width={50} height={50} />
+                        <CardHeader className="flex item-center gap-4 pb-1">
+                            <Image src={system.logo} alt={system.name} width={40} height={40} />
                             <h3>{system.name}</h3>
                         </CardHeader>
-                        <CardBody>
+                        <CardBody className='py-0'>
                             <p className='text-justify'>{system.description}</p>
                         </CardBody>
                         <CardFooter>
-                            <a href={system.link}>
+                            <a href={system.link} target='_blank' rel='noopener noreferrer'>
                                 <Chip variant='faded' color='primary'>launch app</Chip>
                             </a>
                         </CardFooter>
