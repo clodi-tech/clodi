@@ -51,7 +51,7 @@ export default function Systems() {
     return (
         <>
             <div className='flex flex-col justify-center items-center gap-4'>
-                <div className="max-w-md">
+                <div className="text-center max-w-md">
                     <h2>a collection of systems to engineer freedom.</h2>
                     <p></p>
                 </div>

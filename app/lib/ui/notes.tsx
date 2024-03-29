@@ -28,15 +28,15 @@ export default function Notes() {
     return (
         <>
             <div className='flex flex-col justify-center items-center gap-4'>
-                <div className="max-w-md">
+                <div className="text-center max-w-md">
                     <h2>a collection of notes to lighten the mind.</h2>
                     <p></p>
                 </div>
             </div>
             <Accordion>
                 {notes.map((note, index) => (
-                    <AccordionItem key={index} aria-label={`note ${note.title}`} subtitle={note.date} title={note.title}>
-                        <div className="max-w-sm">
+                    <AccordionItem key={index} aria-label={`note ${note.title}`} title={note.title} subtitle={note.date}>
+                        <div className="text-justify max-w-sm">
                             <h2>{note.heading}</h2>
                             <p>{note.content}</p>
                         </div>
