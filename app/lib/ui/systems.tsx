@@ -1,6 +1,52 @@
 import { Card, CardBody, CardFooter, CardHeader, Chip } from '@nextui-org/react';
 import Image from 'next/image';
 
+const defaultContent = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.";
+const systems = [
+    {
+        name: 'tradeboss',
+        description: defaultContent,
+        link: 'https://tradeboss.vercel.app/',
+        logo: '/tradeboss.svg'
+    },
+    {
+        name: 'sorival',
+        description: defaultContent,
+        link: 'https://sorival.vercel.app/',
+        logo: '/sorival.svg'
+    },
+    {
+        name: 'lightime',
+        description: defaultContent,
+        link: 'https://lightime.vercel.app/',
+        logo: '/lightime.svg'
+    },
+    {
+        name: 'goldenr',
+        description: defaultContent,
+        link: 'https://goldenr.vercel.app/',
+        logo: '/goldenr.svg'
+    },
+    {
+        name: 'dgames',
+        description: defaultContent,
+        link: 'https://libero-dgames.netlify.app/',
+        logo: '/dgames.svg'
+    },
+    {
+        name: 'arcade',
+        description: defaultContent,
+        link: 'https://lightime.vercel.app/',
+        logo: '/arcade.svg'
+    },
+    {
+        name: 'fly',
+        description: defaultContent,
+        link: 'https://photos.app.goo.gl/Mo5JA2qGBbL2W1qT9',
+        logo: '/fly.svg'
+    },
+]
+
 export default function Systems() {
     return (
         <>
@@ -9,38 +55,22 @@ export default function Systems() {
                     <h2>a collection of systems to engineer freedom.</h2>
                     <p></p>
                 </div>
-                <Card className="max-w-sm">
-                    <CardHeader className="flex item-center gap-4">
-                        <Image alt="logo"
-                            width={40} height={40}
-                            src="/tradeboss.svg"/>
-                        <h3>tradeboss</h3>
-                    </CardHeader>
-                    <CardBody>
-                        <p className='text-justify'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                    </CardBody>
-                    <CardFooter>
-                        <a href="https://tradeboss.vercel.app/">
-                            <Chip variant='faded' color='primary'>launch app</Chip>
-                        </a>
-                    </CardFooter>
-                </Card>
-                <Card className="max-w-sm">
-                    <CardHeader className="flex item-center gap-4">
-                        <Image alt="logo"
-                            width={40} height={40}
-                            src="/tradeboss.svg"/>
-                        <h3>tradeboss</h3>
-                    </CardHeader>
-                    <CardBody>
-                        <p className='text-justify'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                    </CardBody>
-                    <CardFooter>
-                        <a href="https://tradeboss.vercel.app/">
-                            <Chip variant='faded' color='primary'>launch app</Chip>
-                        </a>
-                    </CardFooter>
-                </Card>
+                {systems.map((system, index) => (
+                    <Card key={index} className="max-w-sm">
+                        <CardHeader className="flex item-center gap-4">
+                            <Image src={system.logo} alt={system.name} width={50} height={50} />
+                            <h3>{system.name}</h3>
+                        </CardHeader>
+                        <CardBody>
+                            <p className='text-justify'>{system.description}</p>
+                        </CardBody>
+                        <CardFooter>
+                            <a href={system.link}>
+                                <Chip variant='faded' color='primary'>launch app</Chip>
+                            </a>
+                        </CardFooter>
+                    </Card>
+                ))}
             </div>
         </>
     );
