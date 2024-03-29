@@ -30,3 +30,14 @@ footer {
   justify-content: center;
   align-items: center;
 }
+
+h1 {
+  font-size: 2rem;
+  font-weight: 500;
+  color: #FFFFFF;
+}
+
+h2 {
+  font-size: 1.5rem;
+  color: #888888;
+}
