@@ -1,6 +1,8 @@
 import { Card, CardBody, CardFooter, CardHeader, Chip } from '@nextui-org/react';
 import Image from 'next/image';
 
+const title = "a collection of systems to engineer freedom.";
+const description = "";
 const defaultContent = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.";
 const systems = [
     {
@@ -52,8 +54,8 @@ export default function Systems() {
         <>
             <div className='flex flex-col justify-center items-center gap-4'>
                 <div className="text-center max-w-md">
-                    <h2>a collection of systems to engineer freedom.</h2>
-                    <p></p>
+                    <h2>{title}</h2>
+                    <p>{description}</p>
                 </div>
                 {systems.map((system, index) => (
                     <Card key={index} className="max-w-sm">
