@@ -30,14 +30,14 @@ const notes = [
 export default function Notes() {
 
     return (
-        <>
+        <main>
             <div className='flex flex-col justify-center items-center gap-4'>
                 <div className="text-center max-w-md">
                     <h2>{title}</h2>
                     <p>{description}</p>
                 </div>
             </div>
-            <Accordion>
+            <Accordion className="max-w-sm">
                 {notes.map((note, index) => (
                     <AccordionItem key={index} aria-label={`note ${note.title}`} title={note.title} subtitle={note.date}>
                         <div className="text-justify max-w-sm">
@@ -47,6 +47,6 @@ export default function Notes() {
                     </AccordionItem>
                 ))}
             </Accordion>
-        </>
+        </main>
     );
 }

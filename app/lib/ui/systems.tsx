@@ -51,7 +51,7 @@ const systems = [
 
 export default function Systems() {
     return (
-        <>
+        <main>
             <div className='flex flex-col justify-center items-center gap-4'>
                 <div className="text-center max-w-md">
                     <h2>{title}</h2>
@@ -74,6 +74,6 @@ export default function Systems() {
                     </Card>
                 ))}
             </div>
-        </>
+        </main>
     );
 }
