@@ -1,5 +1,9 @@
+"use client";
+
 import { Accordion, AccordionItem } from "@nextui-org/react";
 
+const title = "a collection of notes to lighten the mind.";
+const description = "";
 const defaultHeading = "the idea behind building a system";
 const defaultContent = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.";
 const notes = [
@@ -29,8 +33,8 @@ export default function Notes() {
         <>
             <div className='flex flex-col justify-center items-center gap-4'>
                 <div className="text-center max-w-md">
-                    <h2>a collection of notes to lighten the mind.</h2>
-                    <p></p>
+                    <h2>{title}</h2>
+                    <p>{description}</p>
                 </div>
             </div>
             <Accordion>
