@@ -2,8 +2,6 @@
 
 import { Tabs, Tab } from '@nextui-org/react';
 import Hello from "./hello";
-import Systems from "./systems";
-import Notes from "./notes";
 
 export default function Menu() {
 
@@ -13,10 +11,8 @@ export default function Menu() {
           <Hello />
         </Tab>
         <Tab key="systems" title="systems">
-          <Systems />
         </Tab>
         <Tab key="notes" title="notes">
-          <Notes />
         </Tab>
       </Tabs>
   );
