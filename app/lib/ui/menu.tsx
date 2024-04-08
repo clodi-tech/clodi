@@ -1,16 +1,12 @@
-'use client';
-
-import { Tabs, Tab } from '@nextui-org/react';
+import Link from "next/link";
 
 export default function Menu() {
 
   return (
     <main>
-      <Tabs key='menu' variant='underlined' aria-label="menu">
-        <Tab key="hello" title="hello"></Tab>
-        <Tab key="systems" title="systems"></Tab>
-        <Tab key="notes" title="notes"></Tab>
-      </Tabs>
+      <Link href="/">hello</Link>
+      <Link href="/systems">systems</Link>
+      <Link href="/notes">notes</Link>
     </main>
   );
 }
