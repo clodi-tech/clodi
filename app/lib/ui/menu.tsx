@@ -1,14 +1,12 @@
 'use client';
 
 import { Tabs, Tab } from '@nextui-org/react';
-import Hello from "./hello";
 
 export default function Menu() {
 
   return (
       <Tabs key='menu' variant='underlined' aria-label="menu">
         <Tab key="hello" title="hello">
-          <Hello />
         </Tab>
         <Tab key="systems" title="systems">
         </Tab>

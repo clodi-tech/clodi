@@ -5,7 +5,7 @@ const bio = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiu
 
 export default function Hello() {
     return (
-        <>
+        <main>
             <div className='flex flex-col gap-4 max-w-sm'>
                 <div className='flex justify-center items-center gap-4'>
                     <Image src="/about.jpeg" alt="about" className="rounded-3xl border-2 border-gray-600"
@@ -14,6 +14,6 @@ export default function Hello() {
                 </div>
                 <p className='text-justify'>{bio}</p>
             </div>
-        </>
+        </main>
     );
 }
