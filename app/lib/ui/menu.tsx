@@ -5,12 +5,19 @@ import { usePathname } from "next/navigation";
 
 export default function Menu() {
   const pathname = usePathname();
+  const links = [
+    { link: "/", text: "hello" },
+    { link: "/systems", text: "systems" },
+    { link: "/notes", text: "notes" },
+  ];
 
   return (
     <div className="flex justify-center gap-4">
-      <Link href="/" className={pathname === '/' ? 'text-white underline underline-offset-4' : ''}>hello</Link>
-      <Link href="/systems" className={pathname === '/systems' ? 'text-white' : ''}>systems</Link>
-      <Link href="/notes" className={pathname === '/notes' ? 'text-white' : ''}>notes</Link>
+      {links.map(({ link, text }) => (
+        <Link href={link} className={pathname === link ? 'text-white underline underline-offset-4' : ''}>
+          {text}
+        </Link>
+      ))}
     </div>
   );
 }
