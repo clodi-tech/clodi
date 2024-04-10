@@ -1,47 +1,9 @@
 import { Card, CardBody, CardFooter, CardHeader, Chip } from '@nextui-org/react';
 import Image from 'next/image';
+import { systemsData } from './systems';
 
 const title = "curated systems to engineer freedom.";
 const description = "";
-const defaultContent = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.";
-const systems = [
-    {
-        name: 'tradeboss',
-        description: defaultContent,
-        link: 'https://tradeboss.vercel.app/',
-        logo: '/tradeboss.svg'
-    },
-    {
-        name: 'sorival',
-        description: defaultContent,
-        link: 'https://sorival.vercel.app/',
-        logo: '/sorival.svg'
-    },
-    {
-        name: 'goldenr',
-        description: defaultContent,
-        link: 'https://goldenr.vercel.app/',
-        logo: '/goldenr.svg'
-    },
-    {
-        name: 'lightime',
-        description: defaultContent,
-        link: 'https://lightime.vercel.app/',
-        logo: '/lightime.svg'
-    },
-    {
-        name: 'dgames',
-        description: defaultContent,
-        link: 'https://libero-dgames.netlify.app/',
-        logo: '/dgames.svg'
-    },
-    {
-        name: 'arcade',
-        description: defaultContent,
-        link: 'https://libero-arcade.netlify.app/',
-        logo: '/arcade.svg'
-    },
-]
 
 export default function Page() {
     return (
@@ -50,7 +12,7 @@ export default function Page() {
                 <h2>{title}</h2>
                 <p>{description}</p>
             </div>
-            {systems.map((system, index) => (
+            {systemsData.map((system, index) => (
                 <Card key={index} className="max-w-sm">
                     <CardHeader className="flex item-center gap-4 pb-1">
                         <Image src={system.logo} alt={system.name} width={40} height={40} />

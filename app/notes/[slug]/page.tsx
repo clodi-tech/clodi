@@ -1,7 +1,7 @@
 import { notesData } from "../notes";
 import Image from 'next/image';
 
-export default async function Page({ params }: { params: { slug: string } }) {
+export default function Page({ params }: { params: { slug: string } }) {
     const note = notesData.find((note) => note.slug === params.slug);
 
     if(!note) {
