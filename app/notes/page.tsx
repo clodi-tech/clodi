@@ -31,11 +31,9 @@ export default function Page() {
 
     return (
         <main>
-            <div className='flex flex-col justify-center items-center gap-4'>
-                <div className="text-center max-w-md">
-                    <h2>{title}</h2>
-                    <p>{description}</p>
-                </div>
+            <div className="text-center max-w-md">
+                <h2>{title}</h2>
+                <p>{description}</p>
             </div>
             <Accordion className="max-w-sm">
                 {notes.map((note, index) => (
