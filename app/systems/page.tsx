@@ -41,12 +41,6 @@ const systems = [
         link: 'https://libero-arcade.netlify.app/',
         logo: '/arcade.svg'
     },
-    {
-        name: 'fly',
-        description: defaultContent,
-        link: 'https://photos.app.goo.gl/Mo5JA2qGBbL2W1qT9',
-        logo: '/fly.svg'
-    },
 ]
 
 export default function Page() {
