@@ -1,7 +1,9 @@
 type Chapter = {
     title: string;
     content: string;
-    image: string;
+    image?: string;
+    width?: number;
+    height?: number;
 };
 
 type Note = {
@@ -25,11 +27,15 @@ export const notesData: NotesArray = [
                 title: 'chapter 3.1',
                 content: defaultContent,
                 image: 'https://via.placeholder.com/150',
+                width: 100,
+                height: 100,
             },
             {
                 title: 'chapter 3.2',
                 content: defaultContent,
                 image: 'https://via.placeholder.com/150',
+                width: 150,
+                height: 150,
             },
         ]
     },
@@ -41,12 +47,13 @@ export const notesData: NotesArray = [
             {
                 title: 'chapter 2.1',
                 content: defaultContent,
-                image: 'https://via.placeholder.com/150',
             },
             {
                 title: 'chapter 2.2',
                 content: defaultContent,
                 image: 'https://via.placeholder.com/150',
+                width: 150,
+                height: 150,
             },
         ]
     },
@@ -59,11 +66,12 @@ export const notesData: NotesArray = [
                 title: 'chapter 1.1',
                 content: defaultContent,
                 image: 'https://via.placeholder.com/150',
+                width: 150,
+                height: 150,
             },
             {
                 title: 'chapter 1.2',
                 content: defaultContent,
-                image: 'https://via.placeholder.com/150',
             },
         ]
     },

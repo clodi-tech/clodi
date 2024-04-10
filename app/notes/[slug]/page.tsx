@@ -1,4 +1,5 @@
 import { notesData } from "../notes";
+import Image from 'next/image';
 
 export default async function Page({ params }: { params: { slug: string } }) {
     const note = notesData.find((note) => note.slug === params.slug);
@@ -17,6 +18,12 @@ export default async function Page({ params }: { params: { slug: string } }) {
                 <div key={index} className="text-justify w-full max-w-md">
                     <h2>{chapter.title}</h2>
                     <p>{chapter.content}</p>
+                    {chapter.image ?
+                        <div className="flex justify-center items-center m-2">
+                            <Image src={chapter.image} alt="image" 
+                                width={chapter.width} height={chapter.height}/>
+                        </div>
+                        : null}
                 </div>
             ))}
         </main>
