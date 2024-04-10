@@ -10,12 +10,12 @@ export default async function Page({ params }: { params: { slug: string } }) {
 
     return (
         <main>
-            <div className="text-center max-w-md">
+            <div className="text-center max-w-sm">
                 <h3>{note.title}</h3>
                 <small>{note.date}</small>
             </div>
             {note.content.map((chapter, index) => (
-                <div key={index} className="text-justify w-full max-w-md">
+                <div key={index} className="text-justify w-full max-w-sm">
                     <h2>{chapter.title}</h2>
                     <p>{chapter.content}</p>
                     {chapter.image ?

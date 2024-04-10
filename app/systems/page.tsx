@@ -46,7 +46,7 @@ const systems = [
 export default function Page() {
     return (
         <main>
-            <div className="text-center max-w-md">
+            <div className="text-center max-w-sm">
                 <h2>{title}</h2>
                 <p>{description}</p>
             </div>

@@ -3,14 +3,14 @@ import Link from "next/link";
 import { Fragment } from "react";
 import { notesData } from "./notes";
 
-const title = "a collection of notes to lighten the mind.";
+const title = "curated notes to lighten the mind.";
 const description = "";
 
 export default function Page() {
 
     return (
         <main>
-            <div className="text-center max-w-md">
+            <div className="text-center max-w-sm">
                 <h2>{title}</h2>
                 <p>{description}</p>
             </div>
