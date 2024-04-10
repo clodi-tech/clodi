@@ -6,9 +6,9 @@ import './globals.css';
 import { SpeedInsights } from '@vercel/speed-insights/next';
 import { Analytics } from '@vercel/analytics/react';
 
-import Header from "@/app/lib/ui/header";
-import Menu from "@/app/lib/ui/menu";
-import Footer from "@/app/lib/ui/footer";
+import Header from "@/app/ui/header";
+import Menu from "@/app/ui/menu";
+import Footer from "@/app/ui/footer";
 
 const font = Rajdhani({ 
   subsets: ["latin"],
@@ -16,7 +16,7 @@ const font = Rajdhani({
 });
 
 export const metadata: Metadata = {
-  title: 'liberOS',
+  title: 'clodi',
   description: 'operating systems for engineering freedom.',
 };
 
