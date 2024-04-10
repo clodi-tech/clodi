@@ -1,6 +1,7 @@
 "use client";
 
-import { Accordion, AccordionItem } from "@nextui-org/react";
+import { Accordion, AccordionItem, Divider } from "@nextui-org/react";
+import Link from "next/link";
 
 const title = "a collection of notes to lighten the mind.";
 const description = "";
@@ -10,20 +11,17 @@ const notes = [
     {
         title: 'third note',
         date: '2024.03.01',
-        heading: defaultHeading,
-        content: defaultContent
+        slug: 'third-note',
     },
     {
         title: 'second note',
         date: '2024.02.01',
-        heading: defaultHeading,
-        content: defaultContent
+        slug: 'second-note',
     },
     {
         title: 'first note',
         date: '2024.01.01',
-        heading: defaultHeading,
-        content: defaultContent
+        slug: 'first-note',
     },
 ]
 
@@ -35,16 +33,17 @@ export default function Page() {
                 <h2>{title}</h2>
                 <p>{description}</p>
             </div>
-            <Accordion className="max-w-sm">
+            <div className="flex flex-col gap-2 w-full max-w-sm">
                 {notes.map((note, index) => (
-                    <AccordionItem key={index} aria-label={`note ${note.title}`} title={note.title} subtitle={note.date}>
-                        <div className="text-justify max-w-sm">
-                            <h2>{note.heading}</h2>
-                            <p>{note.content}</p>
-                        </div>
-                    </AccordionItem>
+                    <>
+                        <Divider key={index} />
+                        <Link key={index} href={`/notes/${note.slug}`}>
+                            <h3>{note.title}</h3>
+                            <small>{note.date}</small>
+                        </Link>
+                    </>
                 ))}
-            </Accordion>
+            </div>
         </main>
     );
 }
