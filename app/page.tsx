@@ -1,7 +1,17 @@
 import Image from 'next/image';
 
 const title = "hey! it's me, clodi.";
-const bio = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.";
+const biography = [
+    "homo sapiens - planet earth - internet.",
+    "i love to write code trying to find meaningful connections between humans, nature and technology.",
+    "crafting meaningful human-machine interactions to upgrade user experience on planet earth.",
+    "right now i am probably delving into human existence or launching digital products in record time.",
+    "i spent 7 years working for corporations delivering digital projects used by thousands users.",
+    "today i code and launch my own projects and i help talents - startups do the same in the most efficient way thru iterations.",
+    "do you have an idea you want to execute or a project you need to deliver in record time-and-quality?",
+    "intro to systems.",
+    "intro to notes.",
+]
 const size = 100;
 
 export default function Home() {
@@ -13,8 +23,16 @@ export default function Home() {
                         width={size} height={size}/>
                     <h1>{title}</h1>
                 </div>
-                <p className='text-justify'>{bio}</p>
+                {biography.map((bio, index) => (
+                    <p key={index} className='text-justify'>{bio}</p>
+                ))}
             </div>
+            <a href="/resume.pdf" target='_blank'>
+                <div className='flex justify-center items-center gap-1'>
+                    <Image src="/download.svg" alt='download' width={30} height={30} />
+                    <p className='text-white'>resume</p>
+                </div>
+            </a>
         </main>
     );
 }

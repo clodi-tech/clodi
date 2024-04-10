@@ -2,8 +2,8 @@ import { Card, CardBody, CardFooter, CardHeader, Chip } from '@nextui-org/react'
 import Image from 'next/image';
 import { systemsData } from './systems';
 
-const title = "curated systems to engineer freedom.";
-const description = "";
+const title = "curated systems to achieve results.";
+const description = "learn the rules, then break the rules.";
 
 export default function Page() {
     return (
