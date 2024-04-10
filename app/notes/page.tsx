@@ -1,6 +1,6 @@
 "use client";
 
-import { Accordion, AccordionItem, Divider } from "@nextui-org/react";
+import { Divider } from "@nextui-org/react";
 import Link from "next/link";
 
 const title = "a collection of notes to lighten the mind.";
@@ -37,7 +37,7 @@ export default function Page() {
                 {notes.map((note, index) => (
                     <>
                         <Divider key={index} />
-                        <Link key={index} href={`/notes/${note.slug}`}>
+                        <Link key={index} href={`/notes/${note.slug}`} className="px-3 py-1 rounded-md hover:bg-gray-800 transition-colors duration-500">
                             <h3>{note.title}</h3>
                             <small>{note.date}</small>
                         </Link>
