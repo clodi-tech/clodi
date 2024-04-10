@@ -1,5 +1,3 @@
-"use client";
-
 import { Divider } from "@nextui-org/react";
 import Link from "next/link";
 
