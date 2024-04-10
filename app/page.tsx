@@ -1,8 +1,8 @@
 import Image from 'next/image';
 
 const title = "hey! it's me, clodi.";
+const small = "homo sapiens - planet earth - internet";
 const biography = [
-    "homo sapiens - planet earth - internet.",
     "i love to write code trying to find meaningful connections between humans, nature and technology.",
     "crafting meaningful human-machine interactions to upgrade user experience on planet earth.",
     "right now i am probably delving into human existence or launching digital products in record time.",
@@ -21,7 +21,10 @@ export default function Home() {
                 <div className='flex justify-center items-center gap-4'>
                     <Image src="/about.jpeg" alt="about" className="rounded-3xl border-2 border-gray-600"
                         width={size} height={size}/>
-                    <h1>{title}</h1>
+                    <div className='flex flex-col'>
+                        <h1>{title}</h1>
+                        <small className='text-gray-500'>{small}</small>
+                    </div>
                 </div>
                 {biography.map((bio, index) => (
                     <p key={index} className='text-justify'>{bio}</p>
