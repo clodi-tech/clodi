@@ -28,7 +28,7 @@ export default function Home() {
                     <p key={index} className='text-justify'>{bio}</p>
                 ))}
             </div>
-            <a href="/resume.pdf" target='_blank'>
+            <a href="/resume.pdf" target='_blank' rel='noopener'>
                 <div className='flex justify-center items-center gap-1'>
                     <Image src="/download.svg" alt='download' width={30} height={30} />
                     <p className='text-white'>resume</p>
