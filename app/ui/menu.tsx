@@ -14,7 +14,8 @@ export default function Menu() {
   return (
     <div className="flex justify-center gap-4">
       {links.map(({ link, text }, index) => (
-        <Link key={index} href={link} className={(pathname === link && link === '/') || pathname.includes(text) ? 'text-white underline underline-offset-4' : ''}>
+        <Link key={index} href={link} 
+          className={(pathname === link && link === '/') || pathname.includes(text) ? 'text-white underline underline-offset-4' : ''}>
           {text}
         </Link>
       ))}

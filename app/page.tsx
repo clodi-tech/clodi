@@ -3,15 +3,13 @@ import Image from 'next/image';
 const title = "hey! it's me, clodi.";
 const small = "homo sapiens - planet earth - internet";
 const biography = [
-    "i love to write code trying to find meaningful connections between humans, nature and technology.",
-    "crafting meaningful human-machine interactions to upgrade user experience on planet earth.",
-    "right now i am probably delving into human existence or launching digital products in record time.",
-    "i spent 7 years working for corporations delivering digital projects used by thousands users.",
-    "today i code and launch my own projects and i help talents - startups do the same in the most efficient way thru iterations.",
-    "do you have an idea you want to execute or a project you need to deliver in record time-and-quality?",
-    "intro to systems.",
-    "intro to notes.",
-]
+    "i am a developer who finds joy in the art of coding at the intersection betweeen humans, nature and technology, where elusive connections can converge into something magical.",
+    "after spending nearly ninthy months delivering digital solutions for corporations, being adopted by thousands of lives, i realisez it was not enough. i wanted to create and launch my own solutions to common humans' problems that can resonate for me and for others, just like you.",
+    "i want to find my enough. i want to help you find your enough. i know it is somewhere within ourself, we just need the right questions and tools to find out where it hides.",
+    "that is why i steal the best rules from inspiring people to craft systems that work for humans, like you and me. they help us find better questions and use better tools to find our enough.",
+    "you can also find some notes about the rules, the ideas behind a system. it may help you to learn the rules, so that you can finally break them and find your enough.",
+    "if you have rules or systems that work for you, feel free to share them with me. we may work together to shorten our journey in finding our enough.",
+];
 const size = 100;
 
 export default function Home() {
