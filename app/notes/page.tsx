@@ -3,7 +3,7 @@ import Link from "next/link";
 import { Fragment } from "react";
 import { notesData } from "./notes";
 
-const title = "curated notes to explain my ideas.";
+const title = "curated notes to explain enough.";
 const description = "the power of writing to unlock evolution.";
 
 export default function Page() {
@@ -20,7 +20,7 @@ export default function Page() {
                         <Divider />
                         <Link href={`/notes/${note.slug}`} className="px-3 py-1 rounded-lg hover:bg-gray-800 transition-colors duration-500">
                             <h3>{note.title}</h3>
-                            <small>{note.date}</small>
+                            <small className='text-gray-500'>{note.date}</small>
                         </Link>
                     </Fragment>
                 ))}

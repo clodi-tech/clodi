@@ -12,7 +12,7 @@ export default function Page({ params }: { params: { slug: string } }) {
         <main>
             <div className="text-center max-w-sm">
                 <h3>{note.title}</h3>
-                <small>{note.date}</small>
+                <small className='text-gray-500'>{note.date}</small>
             </div>
             {note.content.map((chapter, index) => (
                 <div key={index} className="text-justify w-full max-w-sm">
