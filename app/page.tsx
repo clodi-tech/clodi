@@ -2,14 +2,6 @@ import Image from 'next/image';
 
 const title = "hey! it's me, clodi.";
 const small = "homo sapiens - planet earth - internet";
-const biography = [
-    "i am a developer who finds joy in the art of coding at the intersection between humans, nature and technology, where elusive connections can converge into something magical.",
-    "with nearly ninety months in the corporate world, delivering digital solutions that touched thousands of lives, i realised that was not enough. i did not want to just contribute but to innovate. i want to create solutions to everyday challenges that resonate with humans, just like you and me.",
-    "i want to find that enough, as i am here to help you find yours - a point in time and space where calm, clarity and joy are the only constants. i know it is somewhere within ourselves and technology may help us find it.",
-    "we just need the right system to unearth where it hides. that is why i borrow the finest rules, tools and questions from the greatest minds to design and craft systems that enrich our journey on planet earth. feel free to engage with them.",
-    "within my notes, you will find the philosophies, ideas, and pioneers behind a system. they are not just guidelines but stepping stones to innovation and human exploration. feel free to read them.",
-    "no matter how far or close you are from your enough, your insights could spark the next magical system we may build together. feel free to reach me out. here and now.",
-];
 const size = 100;
 
 export default function Home() {
@@ -24,9 +16,12 @@ export default function Home() {
                         <small className='text-gray-500'>{small}</small>
                     </div>
                 </div>
-                {biography.map((bio, index) => (
-                    <p key={index} className='text-justify'>{bio}</p>
-                ))}
+                <p className='text-justify'>i am a developer who finds joy in the <b>art of coding</b> at the intersection between humans, nature and technology, where elusive connections can converge into something magical.</p>
+                <p className='text-justify'>with nearly ninety months in the corporate world, delivering digital solutions that touched thousands of lives, i realised that was not enough. i did not want to just contribute but to <b>innovate</b>. i want to create solutions to everyday challenges that resonate with humans, just like you and me.</p>
+                <p className='text-justify'>i want to find that <b>enough</b>, as i am here to help you find yours - a point in time and space where calm, clarity and joy are the only constants. i know it is somewhere within ourselves and technology may help us find it.</p>
+                <p className='text-justify'>we just need the right <b>system</b> to unearth where it hides. that is why i borrow the finest rules, tools and questions from the greatest minds to design and craft systems that enrich our journey on planet earth.<br />... feel free to engage with them.</p>
+                <p className='text-justify'>within my <b>notes</b>, you will find the philosophies, ideas, and pioneers behind a system. they are not just guidelines but stepping stones to innovation and human exploration.<br />... feel free to read them.</p>
+                <p className='text-justify'>no matter how far or close you are from your enough, your insights could spark the next magical system we may build together.<br />... feel free to reach me out. here and now.</p>
             </div>
             <a href="/resume.pdf" target='_blank' rel='noopener'>
                 <div className='flex justify-center items-center gap-1'>
