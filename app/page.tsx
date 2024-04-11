@@ -4,11 +4,11 @@ const title = "hey! it's me, clodi.";
 const small = "homo sapiens - planet earth - internet";
 const biography = [
     "i am a developer who finds joy in the art of coding at the intersection betweeen humans, nature and technology, where elusive connections can converge into something magical.",
-    "after spending nearly ninthy months delivering digital solutions for corporations, being adopted by thousands of lives, i realisez it was not enough. i wanted to create and launch my own solutions to common humans' problems that can resonate for me and for others, just like you.",
-    "i want to find my enough. i want to help you find your enough. i know it is somewhere within ourself, we just need the right questions and tools to find out where it hides.",
-    "that is why i steal the best rules from inspiring people to craft systems that work for humans, like you and me. they help us find better questions and use better tools to find our enough.",
-    "you can also find some notes about the rules, the ideas behind a system. it may help you to learn the rules, so that you can finally break them and find your enough.",
-    "if you have rules or systems that work for you, feel free to share them with me. we may work together to shorten our journey in finding our enough.",
+    "after spending nearly ninthy months delivering digital solutions for corporations, being adopted by thousands of lives, i realised it was not enough. i wanted to create and launch my own solutions to common humans' problems that can resonate for me and for others, just like you.",
+    "i now want to find that enough, and i am here on a mission to help you find your enough. i know it is somewhere within ourself, we just need the right questions and tools to find out where it hides.",
+    "that is why i steal the best rules from inspiring people to craft systems that work for humans, like you and me. they help us find better questions and use better tools to enhance our journey on planet earth. feel free to use them.",
+    "you can also find some notes about the rules, the ideas, the people behind a system. it may help you learning the rules, so that you can finally break them and find your enough. feel free to read them.",
+    "no matter how far or close you are from your enough, you may have rules that work for you. just share them with me as i am here to help you navigate the complexity of the digital realm and we may craft a magical system together. feel free to reach me out. here and now.",
 ];
 const size = 100;
 
