@@ -3,12 +3,12 @@ import Image from 'next/image';
 const title = "hey! it's me, clodi.";
 const small = "homo sapiens - planet earth - internet";
 const biography = [
-    "i am a developer who finds joy in the art of coding at the intersection betweeen humans, nature and technology, where elusive connections can converge into something magical.",
-    "after spending nearly ninthy months delivering digital solutions for corporations, being adopted by thousands of lives, i realised it was not enough. i wanted to create and launch my own solutions to common humans' problems that can resonate for me and for others, just like you.",
-    "i now want to find that enough, and i am here on a mission to help you find your enough. i know it is somewhere within ourself, we just need the right questions and tools to find out where it hides.",
-    "that is why i steal the best rules from inspiring people to craft systems that work for humans, like you and me. they help us find better questions and use better tools to enhance our journey on planet earth. feel free to use them.",
-    "you can also find some notes about the rules, the ideas, the people behind a system. it may help you learning the rules, so that you can finally break them and find your enough. feel free to read them.",
-    "no matter how far or close you are from your enough, you may have rules that work for you. just share them with me as i am here to help you navigate the complexity of the digital realm and we may craft a magical system together. feel free to reach me out. here and now.",
+    "i am a developer who finds joy in the art of coding at the intersection between humans, nature and technology, where elusive connections can converge into something magical.",
+    "with nearly ninety months in the corporate world, delivering digital solutions that touched thousands of lives, i realised that was not enough. i did not want to just contribute but to innovate. i want to create solutions to everyday challenges that resonate with humans, just like you and me.",
+    "i want to find that enough, as i am here to help you find yours - a point in time and space where calm, clarity and joy are the only constants. i know it is somewhere within ourselves and technology may help us find it.",
+    "we just need the right system to unearth where it hides. that is why i borrow the finest rules, tools and questions from the greatest minds to design and craft systems that enrich our journey on planet earth. feel free to engage with them.",
+    "within my notes, you will find the philosophies, ideas, and pioneers behind a system. they are not just guidelines but stepping stones to innovation and human exploration. feel free to read them.",
+    "no matter how far or close you are from your enough, your insights could spark the next magical system we may build together. feel free to reach me out. here and now.",
 ];
 const size = 100;
 
