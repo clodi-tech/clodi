@@ -19,7 +19,6 @@ export default function Home() {
                 <p className='text-justify'>i am a developer who finds joy in the <b>art of coding</b> at the intersection between humans, nature and technology, where elusive connections can converge into something magical.</p>
                 <p className='text-justify'>with nearly ninety months in the corporate world, delivering digital solutions that touched thousands of lives, i realised that was not enough. i did not want to just contribute but to <b>innovate</b>. i want to create solutions to everyday challenges that resonate with humans, just like you and me.</p>
                 <p className='text-justify'>i want to find that <b>enough</b>, as i am here to help you find yours - a point in time and space where calm, clarity and joy are the only constants. i know it is somewhere within ourselves and technology may help us find it.</p>
-                <p className='text-justify'>within my <b>notes</b>, you will find the philosophies, ideas, and pioneers behind a system. they are not just guidelines but stepping stones to innovation and human exploration.<br />... feel free to read them.</p>
                 <p className='text-justify'>no matter how far or close you are from your enough, your insights could spark the next magical system we may build together.<br />... feel free to reach me out. here and now.</p>
             </div>
             <a href="/resume.pdf" target='_blank' rel='noopener'>

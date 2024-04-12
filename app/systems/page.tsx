@@ -2,8 +2,8 @@ import { Chip } from '@nextui-org/react';
 import Image from 'next/image';
 import { systemsData } from './systems';
 
-const title = "Curated systems to achieve enough.";
-const description = "Crafted with wisdom from the greatest minds, these systems are designed to get us closer to 'enough' and enrich our journey on Planet Earth.";
+const title = "Curated systems to achieve Enough.";
+const description = "Crafted with wisdom from the greatest minds, these systems are designed to get us closer to Enough and enrich our journey on Planet Earth.";
 const cta = "Engage with them. Here and now.";
 
 export default function Page() {

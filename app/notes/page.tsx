@@ -3,16 +3,18 @@ import Link from "next/link";
 import { Fragment } from "react";
 import { notesData } from "./notes";
 
-const title = "curated notes to define enough.";
-const description = "the power of writing to unlock evolution.";
+const title = "Curated notes to define Enough.";
+const description = "Dive into the ideas, questions and pioneers that inspired a system. These notes are the foundation for meaningful human-machine interactions on our journey towards Enough.";
+const cta = "Pick one and read it. Here and now.";
 
 export default function Page() {
 
     return (
         <main>
-            <div className="text-center max-w-sm">
+            <div className="max-w-sm flex flex-col gap-2 text-center">
                 <h2>{title}</h2>
                 <p>{description}</p>
+                <small className='text-gray-500'>{cta}</small>
             </div>
             <div className="flex flex-col gap-2 w-full max-w-sm">
                 {notesData.map((note, index) => (
