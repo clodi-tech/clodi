@@ -4,7 +4,7 @@ import { Fragment } from "react";
 import { notesData } from "./notes";
 
 const title = "Curated notes to define Enough.";
-const description = "Dive into the ideas, questions and pioneers that inspired a system. These notes are the foundation for meaningful human-machine interactions on our journey towards Enough.";
+const description = "Dive into the ideas, questions and pioneers that inspired our systems. These notes are the foundation for meaningful human-machine interactions on our journey towards Enough.";
 const cta = "Pick one and read it. Here and now.";
 
 export default function Page() {
