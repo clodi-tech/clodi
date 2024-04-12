@@ -3,7 +3,7 @@ import Link from "next/link";
 import { Fragment } from "react";
 import { notesData } from "./notes";
 
-const title = "curated notes to explain enough.";
+const title = "curated notes to define enough.";
 const description = "the power of writing to unlock evolution.";
 
 export default function Page() {
