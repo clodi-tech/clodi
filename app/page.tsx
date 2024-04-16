@@ -16,10 +16,10 @@ export default function Home() {
                         <small className='text-gray-500'>{small}</small>
                     </div>
                 </div>
-                <p className='text-justify'>I am a developer who finds joy in the <b>art of coding</b> at the intersection between <u>humans</u>, <u>nature</u> and <u>technology</u>, where elusive connections can converge into something magical.</p>
-                <p className='text-justify'>After delivering, on behalf of others, diverse digital solutions that touched thousands of lives, I realised <u>that was not Enough</u> for me. I did not want to just contribute but to <b>create solutions</b> for everyday challenges that resonate with humans, just like you and me.</p>
-                <p className='text-justify'>I want to find that <b>Enough</b> - a point in time and space where abundance meets us and <u>we have everything we need</u>. I know it is somewhere within ourselves and a mindful use of technology may help us find it.</p>
-                <p className='text-justify'>I am here to craft <b>systems</b> you can use. I am here to write <b>notes</b> you can read. I am here to help us find our Enough.</p>
+                <p className='text-justify'>I am a developer who finds joy in the <b>art of coding</b> at the intersection between <u>humans</u>, <u>nature</u> and <u>technology</u> - where elusive connections can converge into something magical.</p>
+                <p className='text-justify'>In my carreer, I delivered digital solutions that touched thousands of lives - yet after years in the field I realised <u>that was not Enough</u> for me. All I want is to <b>create solutions</b> for everyday challenges that resonate with humans, just like you and me.</p>
+                <p className='text-justify'>Today, my journey is about finding that <b>Enough</b> - a point in time and space where abundance meets us and <u>we have everything we need</u>. I know it is somewhere within ourselves and a mindful use of technology may guide us there.</p>
+                <p className='text-justify'>I am here to craft <b>systems</b> you can use, write <b>notes</b> you can read, and help us find our Enough.</p>
             </div>
             <a href="/resume.pdf" target='_blank' rel='noopener'>
                 <div className='flex justify-center items-center gap-1'>
