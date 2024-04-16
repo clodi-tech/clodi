@@ -2,18 +2,6 @@ const defaultContent = "Lorem ipsum dolor sit amet, consectetur adipiscing elit,
 
 export const systemsData = [
     {
-        name: 'tradeboss',
-        description: defaultContent,
-        link: 'https://tradeboss.vercel.app/',
-        logo: '/tradeboss.svg'
-    },
-    {
-        name: 'sorival',
-        description: defaultContent,
-        link: 'https://sorival.vercel.app/',
-        logo: '/sorival.svg'
-    },
-    {
         name: 'goldenr',
         description: defaultContent,
         link: 'https://goldenr.vercel.app/',
@@ -26,6 +14,12 @@ export const systemsData = [
         logo: '/lightime.svg'
     },
     {
+        name: 'sorival',
+        description: defaultContent,
+        link: 'https://sorival.vercel.app/',
+        logo: '/sorival.svg'
+    },
+    {
         name: 'dgames',
         description: defaultContent,
         link: 'https://libero-dgames.netlify.app/',
@@ -36,5 +30,11 @@ export const systemsData = [
         description: defaultContent,
         link: 'https://libero-arcade.netlify.app/',
         logo: '/arcade.svg'
+    },
+    {
+        name: 'tradeboss',
+        description: defaultContent,
+        link: 'https://tradeboss.vercel.app/',
+        logo: '/tradeboss.svg'
     },
 ]
