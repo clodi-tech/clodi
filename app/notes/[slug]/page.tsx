@@ -7,22 +7,26 @@ export default async function Page({ params }: { params: { slug: string } }) {
 
     return (
         <main>
-        <div className="text-center max-w-sm">
-            <h3>{note.title}</h3>
-            <small className='text-gray-500'>{note.date}</small>
-        </div>
-        {chapters.map((chapter, index) => (
-            <div key={index} className="text-justify w-full max-w-sm">
-                <h2>{chapter.title}</h2>
-                <p>{chapter.content}</p>
-                {chapter.image ?
-                    <div className="flex justify-center items-center m-2">
-                        <Image src={chapter.image} alt="image" 
-                            width={chapter.width} height={chapter.height}/>
-                    </div>
-                    : null}
+            <div className="text-center max-w-sm">
+                <h3>{note.title}</h3>
+                <small className='text-gray-500'>{note.date}</small>
+                <div className='flex justify-center items-center gap-1'>
+                    <small className='text-gray-500'>{note.views}</small>
+                    <Image src="/views.svg" alt="views" width={15} height={15}/>
+                </div>
             </div>
-        ))}
+            {chapters.map((chapter, index) => (
+                <div key={index} className="text-justify w-full max-w-sm">
+                    <h2>{chapter.title}</h2>
+                    <p>{chapter.content}</p>
+                    {chapter.image ?
+                        <div className="flex justify-center items-center m-2">
+                            <Image src={chapter.image} alt="image" 
+                                width={chapter.width} height={chapter.height}/>
+                        </div>
+                        : null}
+                </div>
+            ))}
         </main>
     );
 }

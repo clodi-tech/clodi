@@ -1,4 +1,5 @@
 import { Divider } from "@nextui-org/react";
+import Image from 'next/image';
 import Link from "next/link";
 import { Fragment } from "react";
 import { sql } from "@vercel/postgres";
@@ -21,9 +22,15 @@ export default async function Page() {
                 {notes.map((note, index) => (
                     <Fragment key={index}>
                         <Divider />
-                        <Link href={`/notes/${note.slug}`} className="px-3 py-1 rounded-lg hover:bg-gray-800 transition-colors duration-500">
-                            <h3>{note.title}</h3>
-                            <small className='text-gray-500'>{note.date}</small>
+                        <Link href={`/notes/${note.slug}`} className="px-3 py-1 rounded-lg hover:bg-gray-800 transition-colors duration-500 flex justify-between">
+                            <div>
+                                <h3>{note.title}</h3>
+                                <small className='text-gray-500'>{note.date}</small>
+                            </div>
+                            <div className='flex justify-center items-center gap-1'>
+                                <small className='text-gray-500'>{note.views}</small>
+                                <Image src="/views.svg" alt="views" width={15} height={15}/>
+                            </div>
                         </Link>
                     </Fragment>
                 ))}
