@@ -26,12 +26,9 @@ export default async function Page() {
                         <p className='text-justify'>{system.description}</p>
                     </div>
                     <div className='flex items-center gap-2'>
-                        <a href={system.app} target='_blank' rel='noopener'>
-                            <Chip variant='faded' color='primary'>app</Chip>
-                        </a>
                         {system.github ? 
                         <a href={system.github} target='_blank' rel='noopener'>
-                            <Chip variant='faded' color='secondary'>github</Chip>
+                            <Chip variant='faded' color='primary'>github</Chip>
                         </a> : null}
                     </div>
                 </a>
