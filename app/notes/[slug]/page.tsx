@@ -27,12 +27,10 @@ export default async function Page({ params }: { params: { slug: string } }) {
                         : null}
                 </div>
             ))}
-            {note.cta ?
-                <div className="text-justify w-full max-w-sm">
-                    <p>{note.cta}</p>
-                    <a href={note.cta_link} target='_blank' rel='noopener'><small className='text-white'><b>Here and now.</b></small></a>
-                </div> 
-                : null}
+            <div className="text-justify w-full max-w-sm">
+                <p>{note.cta}</p>
+                <a href={note.cta_link} target='_blank' rel='noopener'><small className='text-white'><b>Here and now.</b></small></a>
+            </div>
         </main>
     );
 }
