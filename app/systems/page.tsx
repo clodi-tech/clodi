@@ -8,7 +8,7 @@ const cta = "Engage with them. Here and now.";
 const size = 40;
 
 export default async function Page() {
-    const { rows: systems } = await sql`SELECT * from SYSTEMS`;
+    const { rows: systems } = await sql`SELECT * from SYSTEMS order by display`;
     return (
         <main>
             <div className="max-w-sm flex flex-col gap-2 text-center">
