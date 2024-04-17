@@ -8,7 +8,7 @@ const description = "Dive into the ideas, questions and pioneers that inspired o
 const cta = "Pick one and read it. Here and now.";
 
 export default async function Page() {
-    const { rows } = await sql`SELECT * from NOTES`;
+    const { rows: notes } = await sql`SELECT * from NOTES`;
 
     return (
         <main>
@@ -18,7 +18,7 @@ export default async function Page() {
                 <small className='text-gray-500'>{cta}</small>
             </div>
             <div className="flex flex-col gap-2 w-full max-w-sm">
-                {rows.map((note, index) => (
+                {notes.map((note, index) => (
                     <Fragment key={index}>
                         <Divider />
                         <Link href={`/notes/${note.slug}`} className="px-3 py-1 rounded-lg hover:bg-gray-800 transition-colors duration-500">
