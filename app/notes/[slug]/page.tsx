@@ -2,6 +2,8 @@ import Image from 'next/image';
 import { sql } from "@vercel/postgres";
 
 export default async function Page({ params }: { params: { slug: string } }) {
+    // increase views
+    await sql`UPDATE NOTES SET views = views + 1 where slug=${params.slug}`;
     const { rows: [note] } = await sql`SELECT * from NOTES where slug=${params.slug}`;
     const { rows: chapters } = await sql`SELECT * from CHAPTERS where note_slug=${params.slug}`;
 
