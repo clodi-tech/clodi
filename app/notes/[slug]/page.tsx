@@ -2,11 +2,16 @@ import Image from 'next/image';
 import { sql } from "@vercel/postgres";
 
 export default async function Page({ params }: { params: { slug: string } }) {
-    const { rows } = await sql`SELECT * from CHAPTERS where note_slug=${params.slug}`;
+    const { rows: [note] } = await sql`SELECT * from NOTES where slug=${params.slug}`;
+    const { rows: chapters } = await sql`SELECT * from CHAPTERS where note_slug=${params.slug}`;
 
     return (
         <main>
-        {rows.map((chapter, index) => (
+        <div className="text-center max-w-sm">
+            <h3>{note.title}</h3>
+            <small className='text-gray-500'>{note.date}</small>
+        </div>
+        {chapters.map((chapter, index) => (
             <div key={index} className="text-justify w-full max-w-sm">
                 <h2>{chapter.title}</h2>
                 <p>{chapter.content}</p>
