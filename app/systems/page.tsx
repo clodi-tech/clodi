@@ -3,7 +3,7 @@ import Image from 'next/image';
 import { sql } from "@vercel/postgres";
 
 const title = "Curated systems to achieve Enough.";
-const description = "Crafted with wisdom from the greatest minds, these systems are designed to get us closer to Enough and enrich our journey on Planet Earth.";
+const description = "Inspired by the wisdom of great minds, these systems are designed to get us closer to Enough and enrich our journey on Planet Earth.";
 const cta = "Engage with them. Here and now.";
 
 export default async function Page() {
