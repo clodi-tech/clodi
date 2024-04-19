@@ -23,6 +23,7 @@ async function updateSystem(FormData: FormData) {
 
     // revalidate the page
     revalidatePath("/systems");
+    revalidatePath("/systems/edit");
 }
 
 export default async function Page() {
