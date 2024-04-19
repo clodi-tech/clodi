@@ -41,7 +41,7 @@ export default async function Page() {
                     
                     <div className="flex gap-2">
                     <label htmlFor={`description-${system.name}`}>desc:</label>
-                    <input id={`description-${system.name}`} name="description" defaultValue={system.description} /></div>
+                    <textarea id={`description-${system.name}`} name="description" defaultValue={system.description} rows={4} /></div>
 
                     <div className="flex gap-2">
                     <label htmlFor={`app-${system.name}`}>app:</label>

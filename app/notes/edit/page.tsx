@@ -69,7 +69,7 @@ export default async function Page() {
                     <input id={`slug-${note.slug}`} name="slug" defaultValue={note.slug} readOnly /></div>
                     
                     <div className="flex gap-2">
-                    <label htmlFor={`title-${note.slug}`}>desc:</label>
+                    <label htmlFor={`title-${note.slug}`}>title:</label>
                     <input id={`title-${note.slug}`} name="title" defaultValue={note.title} /></div>
 
                     <div className="flex gap-2">
@@ -82,7 +82,7 @@ export default async function Page() {
 
                     <div className="flex gap-2">
                     <label htmlFor={`cta-${note.slug}`}>cta:</label>
-                    <input id={`cta-${note.slug}`} name="cta" defaultValue={note.cta} /></div>
+                    <textarea id={`cta-${note.slug}`} name="cta" defaultValue={note.cta} rows={4} /></div>
 
                     <div className="flex gap-2">
                     <label htmlFor={`cta_link-${note.slug}`}>cta_link:</label>
@@ -112,7 +112,7 @@ export default async function Page() {
 
                     <div className="flex gap-2">
                     <label htmlFor={`content-${chapter.chapter_id}`}>content:</label>
-                    <input id={`content-${chapter.chapter_id}`} name="content" defaultValue={chapter.content} /></div>
+                    <textarea id={`content-${chapter.chapter_id}`} name="content" defaultValue={chapter.content} rows={4} /></div>
 
                     <div className="flex gap-2">
                     <label htmlFor={`image-${chapter.chapter_id}`}>iamge:</label>
