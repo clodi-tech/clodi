@@ -1,6 +1,6 @@
-import { Chip } from '@nextui-org/react';
 import Image from 'next/image';
 import { sql } from "@vercel/postgres";
+import Github from '../ui/github';
 
 const title = "Curated systems to achieve Enough.";
 const description = "Inspired by the wisdom of great minds, these systems are designed to get us closer to Enough and enrich our journey on Planet Earth.";
@@ -26,10 +26,7 @@ export default async function Page() {
                         <p className='text-justify'>{system.description}</p>
                     </div>
                     <div className='flex items-center gap-2'>
-                        {system.github ? 
-                        <a href={system.github} target='_blank' rel='noopener'>
-                            <Chip variant='faded' color='primary'>github</Chip>
-                        </a> : null}
+                        {system.github ? <Github url={system.github} /> : null}
                     </div>
                 </a>
             ))}
