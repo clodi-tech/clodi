@@ -14,15 +14,12 @@ async function updateSystem(FormData: FormData) {
         display: Number(FormData.get('display')),
         pin: FormData.get('pin'),
     }
-    console.log(updated);
 
-    console.log("pin check");
     // check if the pin is correct
     if (updated.pin !== PIN) return;
-    console.log("pin passed");
 
     // update the system in the database
-    console.log(await sql`UPDATE SYSTEMS SET description=${updated.description}, app=${updated.app}, github=${updated.github}, display=${updated.display} WHERE name=${updated.name}`);
+    await sql`UPDATE SYSTEMS SET description=${updated.description}, app=${updated.app}, github=${updated.github}, display=${updated.display} WHERE name=${updated.name}`;
 
     // // revalidate the page
     revalidatePath("/systems/edit");
@@ -39,7 +36,7 @@ export default async function Page() {
                 <form key={index} className="flex flex-col" action={updateSystem}>
                     <div className="flex gap-2">
                     <label htmlFor={`name-${system.name}`}>Name:</label>
-                    <input id={`name-${system.name}`} name="name" defaultValue={system.name} disabled /></div>
+                    <input id={`name-${system.name}`} name="name" defaultValue={system.name} /></div>
                     
                     <div className="flex gap-2">
                     <label htmlFor={`description-${system.name}`}>Desc:</label>
