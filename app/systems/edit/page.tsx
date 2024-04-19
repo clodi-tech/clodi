@@ -1,11 +1,28 @@
 import { sql } from "@vercel/postgres";
+import { revalidatePath } from 'next/cache';
 
 // read pin from env variable
 const PIN = process.env.PIN;
 
-async function updateSystem() {
+async function updateSystem(FormData: FormData) {
     "use server"
-    
+    const updated = {
+        name: String(FormData.get('name')),
+        description: String(FormData.get('description')),
+        app: String(FormData.get('app')),
+        github: String(FormData.get('github')),
+        display: Number(FormData.get('display')),
+        pin: FormData.get('pin'),
+    }
+
+    // check if the pin is correct
+    if (updated.pin !== PIN) return;
+
+    // update the system in the database
+    await sql`UPDATE SYSTEMS SET description=${updated.description}, app=${updated.app}, github=${updated.github}, display=${updated.display} WHERE name=${updated.name}`;
+
+    // // revalidate the page
+    revalidatePath("/systems/edit");
 }
 
 export default async function Page() {
@@ -14,19 +31,12 @@ export default async function Page() {
 
     return (
         <main>
-            {/* Pin code input at the top of the page */}
-            <div>
-                <label htmlFor="pin">Enter Pin Code:</label>
-                <input type="password" id="pin" name="pin" />
-            </div>
-
             {/* Generate a form for each system */}
             {systems.map((system, index) => (
                 <form key={index} className="flex flex-col" action={updateSystem}>
-                    <h3>{system.name}</h3>
                     <div className="flex gap-2">
                     <label htmlFor={`name-${system.name}`}>Name:</label>
-                    <input id={`name-${system.name}`} name="name" defaultValue={system.name} /></div>
+                    <input id={`name-${system.name}`} name="name" defaultValue={system.name} disabled /></div>
                     
                     <div className="flex gap-2">
                     <label htmlFor={`description-${system.name}`}>Desc:</label>
