@@ -1,6 +1,6 @@
 import Image from 'next/image';
+import { Chip } from '@nextui-org/react';
 import { sql } from "@vercel/postgres";
-import Github from '../ui/github';
 
 const title = "Curated systems to achieve Enough.";
 const description = "Inspired by the wisdom of great minds, these systems are designed to get us closer to Enough and enrich our journey on Planet Earth.";
@@ -17,18 +17,24 @@ export default async function Page() {
                 <small className='text-gray-500'>{cta}</small>
             </div>
             {systems.map((system, index) => (
-                <a href={system.app} target='_blank' rel='noopener' key={index} className="max-w-sm p-4 rounded-xl border border-gray-700 shadow hover:border-gray-100 transition-colors duration-500">
-                    <div className="flex items-center gap-3">
+                <div key={index} className="max-w-sm p-4 rounded-xl border border-gray-700 shadow hover:border-gray-100 transition-colors duration-500">
+                    <a href={system.app} target='_blank' rel='noopener' className="flex items-center gap-3">
                         <Image src={`${system.app}/logo.svg`} alt={system.name} width={size} height={size} />
                         <h3>{system.name}</h3>
-                    </div>
+                    </a>
                     <div className='py-3'>
                         <p className='text-justify'>{system.description}</p>
                     </div>
                     <div className='flex items-center gap-2'>
-                        {system.github ? <Github url={system.github} /> : null}
+                        <a href={system.app} target='_blank' rel='noopener' >
+                            <Chip variant='faded' color='primary'>app</Chip>
+                        </a>
+                        {system.github ? 
+                        <a href={system.github} target='_blank' rel='noopener' >
+                            <Chip variant='faded' color='secondary'>github</Chip>
+                        </a> : null}
                     </div>
-                </a>
+                </div>
             ))}
         </main>
     );
