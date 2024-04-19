@@ -34,29 +34,29 @@ export default async function Page() {
         <main>
             {/* Generate a form for each system */}
             {systems.map((system, index) => (
-                <form key={index} className="flex flex-col gap-2" action={updateSystem}>
+                <form key={index} className="max-w-sm w-full flex flex-col gap-2 p-2 border border-gray-800 rounded-lg" action={updateSystem}>
                     <div className="flex gap-2">
-                    <label htmlFor={`name-${system.name}`}>Name:</label>
+                    <label htmlFor={`name-${system.name}`}>name:</label>
                     <input id={`name-${system.name}`} name="name" defaultValue={system.name} readOnly /></div>
                     
                     <div className="flex gap-2">
-                    <label htmlFor={`description-${system.name}`}>Desc:</label>
+                    <label htmlFor={`description-${system.name}`}>desc:</label>
                     <input id={`description-${system.name}`} name="description" defaultValue={system.description} /></div>
 
                     <div className="flex gap-2">
-                    <label htmlFor={`app-${system.name}`}>App URL:</label>
+                    <label htmlFor={`app-${system.name}`}>app:</label>
                     <input id={`app-${system.name}`} name="app" defaultValue={system.app} /></div>
 
                     <div className="flex gap-2">
-                    <label htmlFor={`github-${system.name}`}>GitHub URL:</label>
+                    <label htmlFor={`github-${system.name}`}>github:</label>
                     <input id={`github-${system.name}`} name="github" defaultValue={system.github} /></div>
 
                     <div className="flex gap-2">
-                    <label htmlFor={`display-${system.name}`}>Display:</label>
+                    <label htmlFor={`display-${system.name}`}>display:</label>
                     <input id={`display-${system.name}`} name="display" defaultValue={system.display} /></div>
 
                     <div className="flex gap-2">
-                    <label htmlFor={`pin-${system.name}`}>Pin:</label>
+                    <label htmlFor={`pin-${system.name}`}>pin:</label>
                     <input id={`pin-${system.name}`} name="pin" type="password" /></div>
 
                     <button type="submit">Save</button>

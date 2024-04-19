@@ -59,3 +59,20 @@ small {
   font-size: 0.8rem;
   font-weight: 500;
 }
+
+input {
+  width: 100%;
+  background: transparent;
+}
+
+label {
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: #554444;
+}
+
+button {
+  color: #FFFFFF;
+  border: 1px solid #FFFFFF;
+  border-radius: 0.25rem;
+}

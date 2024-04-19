@@ -63,33 +63,33 @@ export default async function Page() {
         <main>
             {/* Generate a form for each note */}
             {notes.map((note, index) => (
-                <form key={index} className="flex flex-col gap-2" action={updateNote}>
+                <form key={index} className="max-w-sm w-full flex flex-col gap-2 p-2 border border-gray-800 rounded-lg" action={updateNote}>
                     <div className="flex gap-2">
-                    <label htmlFor={`slug-${note.slug}`}>Slug:</label>
+                    <label htmlFor={`slug-${note.slug}`}>slug:</label>
                     <input id={`slug-${note.slug}`} name="slug" defaultValue={note.slug} readOnly /></div>
                     
                     <div className="flex gap-2">
-                    <label htmlFor={`title-${note.slug}`}>Desc:</label>
+                    <label htmlFor={`title-${note.slug}`}>desc:</label>
                     <input id={`title-${note.slug}`} name="title" defaultValue={note.title} /></div>
 
                     <div className="flex gap-2">
-                    <label htmlFor={`date-${note.slug}`}>Date:</label>
+                    <label htmlFor={`date-${note.slug}`}>date:</label>
                     <input id={`date-${note.slug}`} name="date" defaultValue={note.date} /></div>
 
                     <div className="flex gap-2">
-                    <label htmlFor={`views-${note.slug}`}>Views:</label>
+                    <label htmlFor={`views-${note.slug}`}>views:</label>
                     <input id={`views-${note.slug}`} name="views" defaultValue={note.views} /></div>
 
                     <div className="flex gap-2">
-                    <label htmlFor={`cta-${note.slug}`}>Cta:</label>
+                    <label htmlFor={`cta-${note.slug}`}>cta:</label>
                     <input id={`cta-${note.slug}`} name="cta" defaultValue={note.cta} /></div>
 
                     <div className="flex gap-2">
-                    <label htmlFor={`cta_link-${note.slug}`}>Cta Link:</label>
+                    <label htmlFor={`cta_link-${note.slug}`}>cta_link:</label>
                     <input id={`cta_link-${note.slug}`} name="cta_link" defaultValue={note.cta_link} /></div>
 
                     <div className="flex gap-2">
-                    <label htmlFor={`pin-${note.slug}`}>Pin:</label>
+                    <label htmlFor={`pin-${note.slug}`}>pin:</label>
                     <input id={`pin-${note.slug}`} name="pin" type="password" /></div>
 
                     <button type="submit">Save</button>
@@ -97,37 +97,37 @@ export default async function Page() {
             ))}
             {/* Generate a form for each chapter */}
             {chapters.map((chapter, index) => (
-                <form key={index} className="flex flex-col gap-2" action={updateChapter}>
+                <form key={index} className="max-w-sm w-full flex flex-col gap-2 p-2 border border-gray-800 rounded-lg" action={updateChapter}>
                     <div className="flex gap-2">
-                    <label htmlFor={`chapter_id-${chapter.chapter_id}`}>Chapter ID:</label>
+                    <label htmlFor={`chapter_id-${chapter.chapter_id}`}>chap_id:</label>
                     <input id={`chapter_id-${chapter.chapter_id}`} name="chapter_id" defaultValue={chapter.chapter_id} readOnly /></div>
                     
                     <div className="flex gap-2">
-                    <label htmlFor={`note_slug-${chapter.note_slug}`}>Note Slug:</label>
+                    <label htmlFor={`note_slug-${chapter.note_slug}`}>note_slug:</label>
                     <input id={`note_slug-${chapter.note_slug}`} name="note_slug" defaultValue={chapter.note_slug} readOnly /></div>
                     
                     <div className="flex gap-2">
-                    <label htmlFor={`title-${chapter.chapter_id}`}>Title:</label>
+                    <label htmlFor={`title-${chapter.chapter_id}`}>title:</label>
                     <input id={`title-${chapter.chapter_id}`} name="title" defaultValue={chapter.title} /></div>
 
                     <div className="flex gap-2">
-                    <label htmlFor={`content-${chapter.chapter_id}`}>Content:</label>
+                    <label htmlFor={`content-${chapter.chapter_id}`}>content:</label>
                     <input id={`content-${chapter.chapter_id}`} name="content" defaultValue={chapter.content} /></div>
 
                     <div className="flex gap-2">
-                    <label htmlFor={`image-${chapter.chapter_id}`}>Image:</label>
+                    <label htmlFor={`image-${chapter.chapter_id}`}>iamge:</label>
                     <input id={`image-${chapter.chapter_id}`} name="image" defaultValue={chapter.image} /></div>
 
                     <div className="flex gap-2">
-                    <label htmlFor={`width-${chapter.chapter_id}`}>Width:</label>
+                    <label htmlFor={`width-${chapter.chapter_id}`}>width:</label>
                     <input id={`width-${chapter.chapter_id}`} name="width" defaultValue={chapter.width} /></div>
 
                     <div className="flex gap-2">
-                    <label htmlFor={`height-${chapter.chapter_id}`}>Height:</label>
+                    <label htmlFor={`height-${chapter.chapter_id}`}>height:</label>
                     <input id={`height-${chapter.chapter_id}`} name="height" defaultValue={chapter.height} /></div>
 
                     <div className="flex gap-2">
-                    <label htmlFor={`pin-${chapter.chapter_id}`}>Pin:</label>
+                    <label htmlFor={`pin-${chapter.chapter_id}`}>pin:</label>
                     <input id={`pin-${chapter.chapter_id}`} name="pin" type="password" /></div>
 
                     <button type="submit">Save</button>
