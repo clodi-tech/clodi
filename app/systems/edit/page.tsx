@@ -6,7 +6,6 @@ const PIN = process.env.PIN;
 
 async function updateSystem(FormData: FormData) {
     "use server"
-    console.log("submit");
     const updated = {
         name: String(FormData.get('name')),
         description: String(FormData.get('description')),
@@ -15,6 +14,7 @@ async function updateSystem(FormData: FormData) {
         display: Number(FormData.get('display')),
         pin: FormData.get('pin'),
     }
+    console.log(updated);
 
     console.log("pin check");
     // check if the pin is correct
@@ -22,7 +22,7 @@ async function updateSystem(FormData: FormData) {
     console.log("pin passed");
 
     // update the system in the database
-    await sql`UPDATE SYSTEMS SET description=${updated.description}, app=${updated.app}, github=${updated.github}, display=${updated.display} WHERE name=${updated.name}`;
+    console.log(await sql`UPDATE SYSTEMS SET description=${updated.description}, app=${updated.app}, github=${updated.github}, display=${updated.display} WHERE name=${updated.name}`);
 
     // // revalidate the page
     revalidatePath("/systems/edit");
