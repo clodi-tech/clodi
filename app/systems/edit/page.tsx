@@ -37,7 +37,7 @@ export default async function Page() {
                 <form key={index} className="flex flex-col" action={updateSystem}>
                     <div className="flex gap-2">
                     <label htmlFor={`name-${system.name}`}>Name:</label>
-                    <input id={`name-${system.name}`} name="name" defaultValue={system.name} /></div>
+                    <input id={`name-${system.name}`} name="name" defaultValue={system.name} readOnly /></div>
                     
                     <div className="flex gap-2">
                     <label htmlFor={`description-${system.name}`}>Desc:</label>

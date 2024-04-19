@@ -10,9 +10,9 @@ async function updateNote(FormData: FormData) {
         slug: String(FormData.get('slug')),
         title: String(FormData.get('title')),
         date: String(FormData.get('date')),
-        views: String(FormData.get('views')),
-        cta: Number(FormData.get('cta')),
-        cta_link: Number(FormData.get('cta_link')),
+        views: Number(FormData.get('views')),
+        cta: String(FormData.get('cta')),
+        cta_link: String(FormData.get('cta_link')),
         pin: FormData.get('pin'),
     }
 
@@ -38,7 +38,7 @@ export default async function Page() {
                 <form key={index} className="flex flex-col" action={updateNote}>
                     <div className="flex gap-2">
                     <label htmlFor={`slug-${note.slug}`}>Slug:</label>
-                    <input id={`slug-${note.slug}`} name="slug" defaultValue={note.slug} /></div>
+                    <input id={`slug-${note.slug}`} name="slug" defaultValue={note.slug} readOnly /></div>
                     
                     <div className="flex gap-2">
                     <label htmlFor={`title-${note.slug}`}>Desc:</label>
