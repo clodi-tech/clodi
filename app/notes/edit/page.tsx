@@ -63,7 +63,7 @@ export default async function Page() {
         <main>
             {/* Generate a form for each note */}
             {notes.map((note, index) => (
-                <form key={index} className="flex flex-col" action={updateNote}>
+                <form key={index} className="flex flex-col gap-2" action={updateNote}>
                     <div className="flex gap-2">
                     <label htmlFor={`slug-${note.slug}`}>Slug:</label>
                     <input id={`slug-${note.slug}`} name="slug" defaultValue={note.slug} readOnly /></div>
@@ -97,7 +97,7 @@ export default async function Page() {
             ))}
             {/* Generate a form for each chapter */}
             {chapters.map((chapter, index) => (
-                <form key={index} className="flex flex-col" action={updateChapter}>
+                <form key={index} className="flex flex-col gap-2" action={updateChapter}>
                     <div className="flex gap-2">
                     <label htmlFor={`chapter_id-${chapter.chapter_id}`}>Chapter ID:</label>
                     <input id={`chapter_id-${chapter.chapter_id}`} name="chapter_id" defaultValue={chapter.chapter_id} readOnly /></div>

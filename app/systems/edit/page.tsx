@@ -34,7 +34,7 @@ export default async function Page() {
         <main>
             {/* Generate a form for each system */}
             {systems.map((system, index) => (
-                <form key={index} className="flex flex-col" action={updateSystem}>
+                <form key={index} className="flex flex-col gap-2" action={updateSystem}>
                     <div className="flex gap-2">
                     <label htmlFor={`name-${system.name}`}>Name:</label>
                     <input id={`name-${system.name}`} name="name" defaultValue={system.name} readOnly /></div>
