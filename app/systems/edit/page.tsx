@@ -21,8 +21,8 @@ async function updateSystem(FormData: FormData) {
     // update the system in the database
     await sql`UPDATE SYSTEMS SET description=${updated.description}, app=${updated.app}, github=${updated.github}, display=${updated.display} WHERE name=${updated.name}`;
 
-    // // revalidate the page
-    revalidatePath("/systems/edit");
+    // revalidate the page
+    revalidatePath("/systems");
 }
 
 export default async function Page() {
