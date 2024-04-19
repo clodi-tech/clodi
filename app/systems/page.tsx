@@ -19,7 +19,7 @@ export default async function Page() {
             {systems.map((system, index) => (
                 <a href={system.app} target='_blank' rel='noopener' key={index} className="max-w-sm p-4 rounded-xl border border-gray-700 shadow hover:border-gray-100 transition-colors duration-500">
                     <div className="flex items-center gap-3">
-                        <Image src={system.logo} alt={system.name} width={size} height={size} />
+                        <Image src={`${system.app}/logo.svg`} alt={system.name} width={size} height={size} />
                         <h3>{system.name}</h3>
                     </div>
                     <div className='py-3'>
