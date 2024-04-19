@@ -1,8 +1,11 @@
 import { sql } from "@vercel/postgres";
 
+// read pin from env variable
+const PIN = process.env.PIN;
+
 async function updateSystem() {
     "use server"
-    console.log("save");
+    
 }
 
 export default async function Page() {
@@ -38,8 +41,12 @@ export default async function Page() {
                     <input id={`github-${system.name}`} name="github" defaultValue={system.github} /></div>
 
                     <div className="flex gap-2">
-                    <label htmlFor={`github-${system.display}`}>Display:</label>
-                    <input id={`github-${system.display}`} name="github" defaultValue={system.display} /></div>
+                    <label htmlFor={`display-${system.name}`}>Display:</label>
+                    <input id={`display-${system.name}`} name="display" defaultValue={system.display} /></div>
+
+                    <div className="flex gap-2">
+                    <label htmlFor={`pin-${system.name}`}>Pin:</label>
+                    <input id={`pin-${system.name}`} name="pin" type="password" /></div>
 
                     <button type="submit">Save</button>
                 </form>
