@@ -1,14 +1,14 @@
-import { sql } from "@vercel/postgres"; 
+import { sql } from "@vercel/postgres";
+
+async function updateSystem() {
+    "use server"
+    console.log("save");
+}
 
 export default async function Page() {
     // get all the systems from the database
     const { rows: systems } = await sql`SELECT * from SYSTEMS order by display`;
 
-    // create an input for the pin code
-    // create a form for each system
-    // create an input for each field of a system
-    // default the input with the value from the database
-    // create a submit button to update the database
     return (
         <main>
             {/* Pin code input at the top of the page */}
@@ -19,7 +19,7 @@ export default async function Page() {
 
             {/* Generate a form for each system */}
             {systems.map((system, index) => (
-                <form key={index} className="flex flex-col">
+                <form key={index} className="flex flex-col" action={updateSystem}>
                     <h3>{system.name}</h3>
                     <div className="flex gap-2">
                     <label htmlFor={`name-${system.name}`}>Name:</label>
