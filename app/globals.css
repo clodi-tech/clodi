@@ -63,11 +63,15 @@ small {
 input {
   width: 100%;
   background: transparent;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
 }
 
 textarea {
   width: 100%;
   background: transparent;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
 }
 
 label {
