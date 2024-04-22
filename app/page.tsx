@@ -1,5 +1,6 @@
 import Image from 'next/image';
 
+// defining the content of the page
 const title = "Hey! It's me, Clodi.";
 const small = "Homo Sapiens - Planet Earth - Internet";
 const paragraphs = [
@@ -15,6 +16,8 @@ export default function Home() {
     return (
         <main>
             <div className='flex flex-col gap-4 max-w-sm'>
+
+                {/* image, title and subtitle */}
                 <div className='flex justify-center items-center gap-4'>
                     <Image src="/about.jpeg" alt="about" className="rounded-3xl border-2 border-gray-600"
                         width={size} height={size}/>
@@ -23,9 +26,13 @@ export default function Home() {
                         <small className='text-gray-500'>{small}</small>
                     </div>
                 </div>
+
+                {/* biography paragraphs */}
                 {paragraphs.map((text, index) => (
                     <p key={index} className='text-justify' dangerouslySetInnerHTML={{ __html: text }} />
                 ))}
+
+                {/* call to action */}
                 <a href={FORM} target='_blank' rel='noopener'>
                     <small className='text-white'><b>Here and now.</b></small>
                 </a>
