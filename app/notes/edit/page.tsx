@@ -20,7 +20,7 @@ async function updateNote(FormData: FormData) {
     if (updated.pin !== PIN) return;
 
     // update the note in the database
-    await sql`UPDATE NOTES SET title=${updated.title}, date=${updated.date}, views=${updated.views}, cta=${updated.cta}, cta_link=${updated.cta_link} WHERE name=${updated.slug}`;
+    await sql`UPDATE NOTES SET title=${updated.title}, date=${updated.date}, views=${updated.views}, cta=${updated.cta}, cta_link=${updated.cta_link} WHERE slug=${updated.slug}`;
 
     // revalidate the page
     revalidatePath("/notes");
