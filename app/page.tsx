@@ -4,10 +4,10 @@ import Image from 'next/image';
 const title = "Hey! It's me, Clodi.";
 const small = "Homo Sapiens - Planet Earth - Internet";
 const paragraphs = [
-    "I am a developer who finds joy in the <b>art of coding</b> at the intersection between <u>humans</u>, <u>nature</u> and <u>technology</u> - where elusive connections can converge into something magical.",
-    "In my career, I delivered digital solutions that touched thousands of lives - yet after years in the field I realised <u>that was not Enough</u> for me. All I want is to <b>create solutions</b> for everyday challenges that resonate with humans, just like you and me.",
-    "Today, my journey is about finding that <b>Enough</b> - a point in time and space where abundance meets us and <u>we have anything we need</u>. I feel it is somewhere within ourselves and a mindful use of technology may guide us there.",
-    "I am here to craft <b>systems</b> you can use, write <b>notes</b> you can read. And if you start questioning <u>what is Enough for you</u>, subscribe for free and start your journey with five quests about Enough."
+    "I am a human being who finds joy in the <b>art of coding</b> at the intersection between <u>humans</u>, <u>nature</u> and <u>technology</u> - where elusive connections can converge into magic.",
+    "I craft <b>systems</b> you can use, write <b>notes</b> you can read, everything designed to find out how much is <b>Enough</b>.",
+    "That point in time and space where abundance meets us and <u>we have anything we need</u>. I feel it is somewhere within ourselves and a mindful use of technology may guide us there.",
+    "If you want to know how I craft such systems in record time and how you can do the same, get my free guide to unlock your programmer superpower."
 ];
 const size = 100;
 const FORM = "https://clodi.ck.page/7a1db31a8b";
