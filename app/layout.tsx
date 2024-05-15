@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import { Rajdhani } from "next/font/google";
-import { Providers } from "./providers";
 import "./globals.css";
 
 import { SpeedInsights } from "@vercel/speed-insights/next";
@@ -28,12 +27,10 @@ export default function RootLayout({
   return (
     <html lang="en" className="dark">
       <body className={font.className}>
-        <Providers>
-          <Header />
-          <Menu />
-          {children}
-          <Footer />
-        </Providers>
+        <Header />
+        <Menu />
+        {children}
+        <Footer />
         <SpeedInsights />
         <Analytics />
       </body>
