@@ -5,12 +5,10 @@ const title = "Hey! It's me, Clodi.";
 const small = "Homo Sapiens - Planet Earth - Internet";
 const paragraphs = [
   "I am a human being who finds joy in the <b>art of coding</b> at the intersection between <u>humans</u>, <u>nature</u> and <u>technology</u> - where elusive connections can converge into magic.",
-  "I craft <b>systems</b> you can use, write <b>notes</b> you can read, everything designed to find out how much is <b>Enough</b>.",
-  "That point in time and space where abundance meets us and <u>we have anything we need</u>. I feel it is somewhere within ourselves and a mindful use of technology may guide us there.",
-  "If you want to know how I craft such systems in record time and how you can do the same, get my free guide to unlock your programmer superpower.",
+  "Right now I am probably hiking, meditating or building <b>Commit OS</b> - a simple and beautiful system to organize and improve our lives. Check it out.",
 ];
 const size = 100;
-const FORM = "https://clodi.ck.page/7a1db31a8b";
+const CTA = "https://commitos.com";
 
 export default function Home() {
   return (
@@ -41,8 +39,8 @@ export default function Home() {
         ))}
 
         {/* call to action */}
-        <a href={FORM} target="_blank" rel="noopener">
-          <small className="text-white">
+        <a href={CTA} target="_blank" rel="noopener">
+          <small className="text-white underline underline-offset-2">
             <b>Here and now.</b>
           </small>
         </a>
