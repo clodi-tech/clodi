@@ -6,7 +6,6 @@ import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Analytics } from "@vercel/analytics/react";
 
 import Header from "@/app/ui/header";
-import Menu from "@/app/ui/menu";
 import Footer from "@/app/ui/footer";
 
 const font = Rajdhani({
@@ -28,7 +27,6 @@ export default function RootLayout({
     <html lang="en" className="dark">
       <body className={font.className}>
         <Header />
-        <Menu />
         {children}
         <Footer />
         <SpeedInsights />
