@@ -12,9 +12,11 @@ const icons = [
 
 function Icon({ src, alt, href }: { src: string; alt: string; href: string }) {
   return (
-    <a href={href} target="_blank" rel="noopener">
-      <Image src={src} alt={alt} width={15} height={15} />
-    </a>
+    <div className="transition-all duration-300 ease-in-out hover:scale-110 bg-black rounded-full border border-gray-700 hover:bg-gray-900 hover:border-white">
+      <a href={href} target="_blank" rel="noopener" className="block p-2">
+        <Image src={src} alt={alt} width={15} height={15} />
+      </a>
+    </div>
   );
 }
 
