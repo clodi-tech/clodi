@@ -5,7 +5,7 @@ const title = "Hey! It's me, Clodi.";
 const small = "Homo Sapiens - Planet Earth - Internet";
 const paragraphs = [
   "I am a human being who finds joy in the <b>art of coding</b> at the intersection between <u>humans</u>, <u>nature</u> and <u>technology</u> - where elusive connections can converge into magic.",
-  "Right now I am probably hiking, meditating or building <b>Commit OS</b> - a simple and beautiful system to organize and improve our lives. Check it out.",
+  "Right now I am probably hiking, meditating or building <b>Commit OS</b> - a simple and beautiful system to organize our life around our goals. Check it out.",
 ];
 const size = 100;
 const CTA = "https://commitos.com";
