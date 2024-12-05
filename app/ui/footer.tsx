@@ -1,8 +1,11 @@
 import Image from "next/image";
 
 const icons = [
-  { src: "/twitter.svg", alt: "twitter", href: "https://x.com/clodi_tech" },
-  { src: "/github.svg", alt: "github", href: "https://github.com/clodi-tech" },
+  {
+    src: "/instagram.svg",
+    alt: "instagram",
+    href: "https://instagram.com/clodi_tech",
+  },
   {
     src: "/linkedin.svg",
     alt: "linkedin",
