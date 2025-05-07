@@ -8,7 +8,7 @@ export default function Home() {
       <Image src={Logo} alt="Logo" width={50} />
       <p>currently rebuilding this website, pls come back soon.</p>
       <p>
-        meanwhile, let's connect on{" "}
+        meanwhile, let&apos;s connect on{" "}
         <a href={Links.linkedin} target="_blank" rel="noopener">
           <span className="text-blue-500 underline underline-offset-2">
             linkedin
