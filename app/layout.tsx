@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { fontSans } from "@/lib/const";
 import "./globals.css";
+import { Analytics } from "@vercel/analytics/next";
 
 export const metadata: Metadata = {
   title: "Clodi - Digital Product Engineer",
@@ -14,7 +15,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${fontSans.variable} antialiased`}>{children}</body>
+      <body className={`${fontSans.variable} antialiased`}>
+        {children}
+        <Analytics />
+      </body>
     </html>
   );
 }
