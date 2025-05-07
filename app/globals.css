@@ -1,87 +1,26 @@
-@import "tailwindcss/base";
-@import "tailwindcss/components";
-@import "tailwindcss/utilities";
+@import "tailwindcss";
 
 :root {
-  color: #bbbbbb;
-  background: #000000;
+  --background: #ffffff;
+  --foreground: #171717;
 }
 
-header {
-  padding: 2rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
 }
 
-main {
-  padding: 2rem;
-  gap: 1rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
 }
 
-footer {
-  padding: 2rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-h1 {
-  font-size: 2rem;
-  font-weight: 500;
-  color: #ffffff;
-}
-
-h2 {
-  font-size: 1.6rem;
-  font-weight: 600;
-  color: #888888;
-}
-
-h3 {
-  font-size: 1.25rem;
-  font-weight: 500;
-  color: #ffffff;
-}
-
-p {
-  font-size: 1rem;
-  font-weight: 400;
-  color: #bbbbbb;
-}
-
-small {
-  font-size: 0.8rem;
-  font-weight: 500;
-}
-
-input {
-  width: 100%;
-  background: transparent;
-  padding-left: 0.5rem;
-  padding-right: 0.5rem;
-}
-
-textarea {
-  width: 100%;
-  background: transparent;
-  padding-left: 0.5rem;
-  padding-right: 0.5rem;
-}
-
-label {
-  font-size: 0.8rem;
-  font-weight: 500;
-  color: #554444;
-}
-
-button {
-  color: #ffffff;
-  border: 1px solid #ffffff;
-  border-radius: 0.25rem;
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
 }
