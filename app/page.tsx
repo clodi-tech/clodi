@@ -28,6 +28,7 @@ const projects = [
   {
     name: "Wagone",
     description: "See the world by rail.",
+    link: "https://wagone.com",
   },
 ];
 
@@ -43,7 +44,7 @@ export default function Home() {
             alt="Profile"
             width={56}
             height={56}
-            className="rounded-xl border border-4 border-muted"
+            className="rounded-xl border-4 border-muted"
           />
           <h1 className="text-2xl font-semibold mt-2">
             hey! Clodi here{" "}
@@ -62,12 +63,14 @@ export default function Home() {
         <h2 className="text-lg mb-2">Products I have built</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           {products.map((product, i) => (
-            <Card key={i}>
-              <CardHeader>
-                <CardTitle>{product.name}</CardTitle>
-                <CardDescription>{product.description}</CardDescription>
-              </CardHeader>
-            </Card>
+            <a href={product.link} target="_blank" rel="noopener" key={i}>
+              <Card>
+                <CardHeader>
+                  <CardTitle>{product.name}</CardTitle>
+                  <CardDescription>{product.description}</CardDescription>
+                </CardHeader>
+              </Card>
+            </a>
           ))}
         </div>
       </section>
@@ -77,12 +80,14 @@ export default function Home() {
         <h2 className="text-lg mb-2">Projects I have worked on</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           {projects.map((project, i) => (
-            <Card key={i}>
-              <CardHeader>
-                <CardTitle>{project.name}</CardTitle>
-                <CardDescription>{project.description}</CardDescription>
-              </CardHeader>
-            </Card>
+            <a href={project.link} target="_blank" rel="noopener" key={i}>
+              <Card>
+                <CardHeader>
+                  <CardTitle>{project.name}</CardTitle>
+                  <CardDescription>{project.description}</CardDescription>
+                </CardHeader>
+              </Card>
+            </a>
           ))}
         </div>
       </section>
