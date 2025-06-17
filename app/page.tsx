@@ -9,27 +9,7 @@ import {
   CardDescription,
 } from "@/components/ui/card";
 import FormEmail from "@/components/form-email";
-
-const products = [
-  {
-    name: "Commit OS",
-    description: "Your life, simply organized.",
-    link: "https://commitos.com",
-  },
-  {
-    name: "Easycommerce",
-    description: "Ecommerce, but easy.",
-    link: "https://easycommerce.live",
-  },
-];
-
-const projects = [
-  {
-    name: "Wagone",
-    description: "See the world by rail.",
-    link: "https://wagone.com",
-  },
-];
+import { products, projects } from "@/lib/const";
 
 export default function Home() {
   return (
