@@ -22,7 +22,7 @@ export async function getEmail(prevState: string, formData: FormData) {
 
   const { error: emailError } = await resend.emails.send({
     from: "ciao@clodi.tech",
-    to: email as string,
+    to: "ciao@clodi.tech",
     subject: "Clodi | New Prospect",
     text: `You have a new prospect: ${email}`,
   });

@@ -7,7 +7,7 @@ import { getEmail } from "@/lib/actions";
 import { useActionState } from "react";
 
 export default function FormEmail() {
-  const [state, formAction] = useActionState(getEmail, "");
+  const [state, formAction, isPending] = useActionState(getEmail, "");
 
   return (
     <div className="flex flex-col items-center gap-2 w-full">
@@ -19,7 +19,9 @@ export default function FormEmail() {
           required
           className="flex-1"
         />
-        <Button type="submit">Send</Button>
+        <Button type="submit" disabled={isPending}>
+          {isPending ? "Sending..." : "Send"}
+        </Button>
       </Form>
       {state &&
         (state === "ok" ? (
