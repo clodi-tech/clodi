@@ -8,8 +8,7 @@ import {
   CardTitle,
   CardDescription,
 } from "@/components/ui/card";
-import { Input } from "@/components/ui/input";
-import { Button } from "@/components/ui/button";
+import FormEmail from "@/components/form-email";
 
 const products = [
   {
@@ -95,15 +94,7 @@ export default function Home() {
       {/* Section 4: Contact */}
       <section className="w-full flex flex-col gap-4 items-center">
         <h2 className="text-lg font-semibold mb-2">We may work together</h2>
-        <div className="flex gap-2 w-full max-w-xs">
-          <Input
-            type="email"
-            placeholder="Your email"
-            required
-            className="flex-1"
-          />
-          <Button type="submit">Send</Button>
-        </div>
+        <FormEmail />
         <p className="text-xs text-muted-foreground mt-2">
           Connect with me on{" "}
           <a
