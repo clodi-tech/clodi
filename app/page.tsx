@@ -33,7 +33,7 @@ export default function Home() {
           </h1>
         </div>
         <p className="text-muted-foreground text-center max-w-md">
-          I craft meaningful human-machine interaction with care.
+          I craft meaningful digital experiences with care.
         </p>
       </section>
 
