@@ -7,30 +7,27 @@ import {
   CardHeader,
   CardTitle,
   CardDescription,
-  CardContent,
 } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 
 const products = [
   {
-    name: "Product One",
-    description: "A meaningful product that solves a real problem.",
+    name: "Commit OS",
+    description: "Your life, simply organized.",
+    link: "https://commitos.com",
   },
   {
-    name: "Product Two",
-    description: "Another impactful product for modern teams.",
+    name: "Easycommerce",
+    description: "Ecommerce, but easy.",
+    link: "https://easycommerce.live",
   },
 ];
 
 const projects = [
   {
-    name: "Project Alpha",
-    description: "Helped design and build a scalable platform.",
-  },
-  {
-    name: "Project Beta",
-    description: "Contributed to a delightful user experience.",
+    name: "Wagone",
+    description: "See the world by rail.",
   },
 ];
 
