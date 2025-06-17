@@ -1,20 +1,125 @@
 import Logo from "@/public/logo.png";
+import ProfilePic from "@/public/profile.jpg";
 import Image from "next/image";
 import { Links } from "@/lib/const";
+import {
+  Card,
+  CardHeader,
+  CardTitle,
+  CardDescription,
+  CardContent,
+} from "@/components/ui/card";
+import { Input } from "@/components/ui/input";
+import { Button } from "@/components/ui/button";
+
+const products = [
+  {
+    name: "Product One",
+    description: "A meaningful product that solves a real problem.",
+  },
+  {
+    name: "Product Two",
+    description: "Another impactful product for modern teams.",
+  },
+];
+
+const projects = [
+  {
+    name: "Project Alpha",
+    description: "Helped design and build a scalable platform.",
+  },
+  {
+    name: "Project Beta",
+    description: "Contributed to a delightful user experience.",
+  },
+];
 
 export default function Home() {
   return (
-    <main className="flex flex-col items-center justify-center p-20 gap-10">
-      <Image src={Logo} alt="Logo" width={50} />
-      <p>currently rebuilding this website, pls come back soon.</p>
-      <p>
-        meanwhile, let&apos;s connect on{" "}
-        <a href={Links.linkedin} target="_blank" rel="noopener">
-          <span className="text-blue-500 underline underline-offset-2">
-            linkedin
+    <main className="flex flex-col items-center gap-20 py-16 px-4 max-w-2xl mx-auto">
+      {/* Section 1: Intro */}
+      <section className="flex flex-col items-center gap-4 w-full">
+        <div className="flex items-center gap-4">
+          <Image
+            src={Logo}
+            alt="Logo"
+            width={40}
+            height={40}
+            className="rounded-xl"
+          />
+          <Image
+            src={ProfilePic}
+            alt="Profile"
+            width={56}
+            height={56}
+            className="rounded-full border border-muted"
+          />
+        </div>
+        <h1 className="text-2xl font-semibold mt-2">
+          hey! Clodi here{" "}
+          <span role="img" aria-label="waving hand">
+            👋
           </span>
-        </a>
-      </p>
+        </h1>
+        <p className="text-muted-foreground text-center max-w-md">
+          I craft meaningful human-machine interaction with care
+        </p>
+      </section>
+
+      {/* Section 2: Products */}
+      <section className="w-full flex flex-col gap-4">
+        <h2 className="text-lg font-semibold mb-2">Products I built</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          {products.map((product, i) => (
+            <Card key={i}>
+              <CardHeader>
+                <CardTitle>{product.name}</CardTitle>
+                <CardDescription>{product.description}</CardDescription>
+              </CardHeader>
+            </Card>
+          ))}
+        </div>
+      </section>
+
+      {/* Section 3: Projects */}
+      <section className="w-full flex flex-col gap-4">
+        <h2 className="text-lg font-semibold mb-2">Projects I helped</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          {projects.map((project, i) => (
+            <Card key={i}>
+              <CardHeader>
+                <CardTitle>{project.name}</CardTitle>
+                <CardDescription>{project.description}</CardDescription>
+              </CardHeader>
+            </Card>
+          ))}
+        </div>
+      </section>
+
+      {/* Section 4: Contact */}
+      <section className="w-full flex flex-col gap-4 items-center">
+        <h2 className="text-lg font-semibold mb-2">We may work together</h2>
+        <div className="flex gap-2 w-full max-w-xs">
+          <Input
+            type="email"
+            placeholder="Your email"
+            required
+            className="flex-1"
+          />
+          <Button type="submit">Send</Button>
+        </div>
+        <p className="text-xs text-muted-foreground mt-2">
+          Or connect on{" "}
+          <a
+            href={Links.linkedin}
+            target="_blank"
+            rel="noopener"
+            className="underline underline-offset-2 text-blue-500"
+          >
+            LinkedIn
+          </a>
+        </p>
+      </section>
     </main>
   );
 }
