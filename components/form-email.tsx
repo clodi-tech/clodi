@@ -21,11 +21,14 @@ export default function FormEmail() {
         />
         <Button type="submit">Send</Button>
       </Form>
-      {state && state === "ok" && (
-        <small className="text-green-500">
-          Thanks! I will get back to you soon.
-        </small>
-      )}
+      {state &&
+        (state === "ok" ? (
+          <small className="text-green-500">
+            Thanks! I will get back to you soon.
+          </small>
+        ) : (
+          <small className="text-red-500">{state}</small>
+        ))}
     </div>
   );
 }
