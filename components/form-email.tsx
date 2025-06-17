@@ -7,7 +7,7 @@ import { getEmail } from "@/lib/actions";
 import { useActionState } from "react";
 
 export default function FormEmail() {
-  const [state, formAction] = useActionState(getEmail, null);
+  const [state, formAction] = useActionState(getEmail, "");
 
   return (
     <div className="flex flex-col items-center gap-2 w-full">
