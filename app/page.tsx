@@ -39,7 +39,10 @@ export default function Home() {
 
       {/* Section 2: Products */}
       <section className="w-full flex flex-col gap-4">
-        <h2 className="text-lg mb-2">Products I have built</h2>
+        <h2 className="text-lg mb-2">
+          I <span className="font-semibold">create products</span> that should
+          exist
+        </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           {products.map((product, i) => (
             <a href={product.link} target="_blank" rel="noopener" key={i}>
@@ -56,7 +59,10 @@ export default function Home() {
 
       {/* Section 3: Projects */}
       <section className="w-full flex flex-col gap-4">
-        <h2 className="text-lg mb-2">Projects I have worked on</h2>
+        <h2 className="text-lg mb-2">
+          I <span className="font-semibold">help projects</span> that want to
+          matter
+        </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           {projects.map((project, i) => (
             <a href={project.link} target="_blank" rel="noopener" key={i}>
