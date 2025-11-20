@@ -48,6 +48,7 @@ npm run build
 - `/app` - Next.js App Router pages and layouts
 - `/lib` - Shared utilities and configurations
   - `/lib/components` - Reusable React components
+  - `/lib/actions.ts` - Server actions (e.g., email submission)
   - `/lib/types.ts` - TypeScript type and interface definitions
   - `/lib/const.ts` - Application constants and data
 - `/public` - Static assets
@@ -56,7 +57,7 @@ npm run build
 
 ### Home Page Structure
 
-The home page ([app/page.tsx](app/page.tsx)) is structured into four main sections:
+The home page ([app/page.tsx](app/page.tsx)) is structured into three main sections:
 
 1. **Hero Section**
 
@@ -72,7 +73,11 @@ The home page ([app/page.tsx](app/page.tsx)) is structured into four main sectio
    - Dynamic list of project cards mapped from `projects` constant
 
 3. **Contact/CTA Section**
-   - Icon
-   - CTA text ("il prossimo potrebbe essere il tuo")
-   - Email input field
-   - Submit button
+   - Heart handshake icon
+   - CTA text
+   - `EmailForm` component with:
+     - Server action form using `next/form` and `useActionState`
+     - Email input with label wrapper for accessibility
+     - Submit button with pending state
+     - Success message on submission
+     - Telegram notification integration via server action
