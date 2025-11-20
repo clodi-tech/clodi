@@ -15,11 +15,14 @@ export default function EmailForm() {
           type="email"
           name="email"
           required
-          className="rounded border"
+          className="px-2 py-1 rounded border focus:outline-none focus:ring-2 focus:ring-mid"
           disabled={pending}
         />
       </label>
-      <button disabled={pending} className="rounded border">
+      <button
+        disabled={pending}
+        className="px-2 py-1 text-sm rounded border bg-foreground text-background w-full hover:bg-light transition-colors disabled:opacity-50"
+      >
         {pending ? "invio..." : "invia"}
       </button>
       {state?.success && (
