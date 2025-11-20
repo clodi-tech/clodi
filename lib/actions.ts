@@ -6,7 +6,7 @@ export async function submitEmail(
 ) {
   const email = formData.get("email");
 
-  const message = `Email submitted: ${email}`;
+  const message = `Clodi Tech | new prospect: ${email}`;
 
   const response = await fetch(
     `https://api.telegram.org/bot${process.env.TELEGRAM_BOT_TOKEN}/sendMessage`,
