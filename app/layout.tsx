@@ -1,11 +1,22 @@
 import type { Metadata } from "next";
-import { fontSans } from "@/lib/const";
+import { Rajdhani, Space_Mono } from "next/font/google";
 import "./globals.css";
-import { Analytics } from "@vercel/analytics/next";
+
+const fontSans = Rajdhani({
+  variable: "--my-font-sans",
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700"],
+});
+
+const fontMono = Space_Mono({
+  variable: "--my-font-mono",
+  subsets: ["latin"],
+  weight: ["400", "700"],
+});
 
 export const metadata: Metadata = {
-  title: "Clodi - Digital Product Engineer",
-  description: "Cogito, ergo iterum. From ether to ecstasy.",
+  title: "Clodi",
+  description: "Clodi is a freelance product engineer based in Varzi, Italy.",
 };
 
 export default function RootLayout({
@@ -15,9 +26,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${fontSans.variable} antialiased`}>
+      <body className={`${fontSans.variable} ${fontMono.variable} antialiased`}>
         {children}
-        <Analytics />
       </body>
     </html>
   );
