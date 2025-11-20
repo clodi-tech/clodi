@@ -1,8 +1,10 @@
 import Image from "next/image";
 import logo from "@/public/logo.png";
 import about from "@/public/about.jpeg";
+import icon from "@/public/icon.svg";
 import MyTitle from "@/lib/components/my-title";
 import Project from "@/lib/components/project";
+import EmailForm from "@/lib/components/email-form";
 import { projects } from "@/lib/const";
 
 export default function Home() {
@@ -36,10 +38,9 @@ export default function Home() {
         ))}
       </div>
       <div className="flex flex-col items-center gap-1">
-        <div>icona</div>
-        <div>il prossimo potrebbe essere il tuo</div>
-        <div>input email</div>
-        <div>button</div>
+        <Image src={icon} alt="Heart Handshake Icon" width={24} height={24} />
+        <p className="text-mid">il prossimo potrebbe essere il tuo.</p>
+        <EmailForm />
       </div>
     </main>
   );
