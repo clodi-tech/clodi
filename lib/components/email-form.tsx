@@ -8,17 +8,16 @@ export default function EmailForm() {
 
   return (
     <form action={formAction} className="flex flex-col items-center gap-2">
-      <label htmlFor="email" className="text-light">
+      <label className="flex flex-col text-light">
         ti ricontatto tramite email
+        <input
+          type="email"
+          name="email"
+          required
+          className="rounded border"
+          disabled={pending}
+        />
       </label>
-      <input
-        id="email"
-        type="email"
-        name="email"
-        required
-        className="rounded border"
-        disabled={pending}
-      />
       <button disabled={pending} className="rounded border">
         {pending ? "invio..." : "invia"}
       </button>
