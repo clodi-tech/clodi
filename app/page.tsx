@@ -23,7 +23,7 @@ export default function Home() {
         </p>
       </div>
       <div className="flex flex-col items-center gap-2">
-        <div>MIEIPROGETTI</div>
+        <MyTitle first="MIEI" second="PROGETTI" as="h2" />
         <div className="flex flex-col items-center">
           <div>progetto 1</div>
           <div>ti racconto il progetto 1</div>

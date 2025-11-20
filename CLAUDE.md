@@ -52,7 +52,7 @@ npm run build
 
 ### Components
 
-- **MyTitle** ([lib/components/my-title.tsx](lib/components/my-title.tsx)) - Signature title component with two-word styling (first word gray-mid, second word white, uppercase, semibold)
+- **MyTitle** ([lib/components/my-title.tsx](lib/components/my-title.tsx)) - Signature title component with two-word styling (first word gray-mid, second word white, uppercase, semibold). Accepts optional `as` prop for semantic heading levels (h1-h4), defaults to h2.
 
 ## Business Logic
 
