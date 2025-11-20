@@ -30,7 +30,9 @@ npm run build
 ### Styling
 
 - Tailwind CSS 4 with custom inline theme configuration in [app/globals.css](app/globals.css)
-- Custom CSS variables: `--background`, `--foreground`
+- Custom CSS variables:
+  - `--background`, `--foreground`
+  - `--light`, `--mid`, `--dark`
 - Dark theme by default
 - Google Fonts loaded via Next.js font optimization in [lib/fonts.ts](lib/fonts.ts):
   - Rajdhani (sans-serif, weights: 300-700)
@@ -45,7 +47,12 @@ npm run build
 
 - `/app` - Next.js App Router pages and layouts
 - `/lib` - Shared utilities and configurations
+  - `/lib/components` - Reusable React components
 - `/public` - Static assets
+
+### Components
+
+- **MyTitle** ([lib/components/my-title.tsx](lib/components/my-title.tsx)) - Signature title component with two-word styling (first word gray-mid, second word white, uppercase, semibold)
 
 ## Business Logic
 
@@ -53,31 +60,21 @@ npm run build
 
 The home page ([app/page.tsx](app/page.tsx)) is structured into four main sections:
 
-1. **Header Section**
+1. **Hero Section**
 
-   - Logo
-   - Profile image + greeting ("HEY CIAO")
+   - Logo (centered)
+   - Horizontal layout: "HEY CIAO" + profile image + "SONO CLODI"
+     - Uses `MyTitle` component for signature titles (first word in gray-mid, second word in white)
+     - Profile image with rounded corners and dark border
+   - Tagline in small, light gray text
 
-2. **Introduction Section**
-
-   - Name introduction ("SONO CLODI")
-   - Tagline about creating custom tech projects
-
-3. **Projects Showcase**
+2. **Projects Showcase**
 
    - Section title ("MIEI PROGETTI")
    - 3 project cards with title and description
 
-4. **Contact/CTA Section**
+3. **Contact/CTA Section**
    - Icon
    - CTA text ("il prossimo potrebbe essere il tuo")
    - Email input field
    - Submit button
-
-Each section should be tackled and refined one at a time.
-
-## Maintaining This File
-
-After making significant changes to the codebase (new architecture patterns, business logics, major refactors, new conventions), review and update this CLAUDE.md file.
-
-Do not add information that can be easily discovered by reading configuration files or is self-evident from the code structure.

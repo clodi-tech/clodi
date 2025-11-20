@@ -1,16 +1,26 @@
+import Image from "next/image";
+import logo from "@/public/logo.png";
+import about from "@/public/about.jpeg";
+import MyTitle from "@/lib/components/my-title";
+
 export default function Home() {
   return (
     <main className="flex flex-col items-center min-h-screen p-10 gap-10">
+      <Image src={logo} alt="Clodi Logo" width={40} />
       <div className="flex flex-col items-center gap-1">
-        <div>logo</div>
-        <div className="flex gap-2">
-          <div>image</div>
-          <div>HEYCIAO</div>
+        <div className="flex items-center gap-2">
+          <MyTitle first="HEY" second="CIAO" />
+          <Image
+            src={about}
+            alt="Clodi About"
+            width={50}
+            className="rounded border-3 border-dark"
+          />
+          <MyTitle first="SONO" second="CLODI" />
         </div>
-      </div>
-      <div className="flex flex-col items-center gap-1">
-        <div>SONOCLODI</div>
-        <div>creo progetti tech su misura, con cura.</div>
+        <p className="text-sm text-light">
+          creo progetti tech su misura, con cura.
+        </p>
       </div>
       <div className="flex flex-col items-center gap-2">
         <div>MIEIPROGETTI</div>
