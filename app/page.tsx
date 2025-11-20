@@ -1,5 +1,8 @@
-import Image from "next/image";
-
 export default function Home() {
-  return <main>Clodi</main>;
+  return (
+    <main>
+      <div className="font-sans">Clodi</div>
+      <div className="font-mono">Clodi</div>
+    </main>
+  );
 }

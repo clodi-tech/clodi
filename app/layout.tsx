@@ -1,18 +1,6 @@
 import type { Metadata } from "next";
-import { Rajdhani, Space_Mono } from "next/font/google";
+import { fontSans, fontMono } from "@/lib/fonts";
 import "./globals.css";
-
-const fontSans = Rajdhani({
-  variable: "--my-font-sans",
-  subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700"],
-});
-
-const fontMono = Space_Mono({
-  variable: "--my-font-mono",
-  subsets: ["latin"],
-  weight: ["400", "700"],
-});
 
 export const metadata: Metadata = {
   title: "Clodi",
