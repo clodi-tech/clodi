@@ -2,28 +2,26 @@ import { Project } from "@/lib/types";
 
 export const projects: Project[] = [
   {
-    logo: "",
-    title: "cdc",
-    description: "ti racconto il progetto 2",
+    title: "caffè del centro",
+    description: "ho creato una piattaforma di prenotazioni online",
   },
   {
-    logo: "",
     title: "wagone",
-    description: "ti racconto il progetto 3",
+    description:
+      "ho aiutato Nathalie a creare la sua piattaforma di itinerari di viaggio in treno",
   },
   {
-    logo: "",
     title: "commit",
-    description: "ti racconto il progetto 1",
+    description:
+      "ho digitalizzato la mia agenda personale dove gestisco i miei obiettivi",
   },
   {
-    logo: "",
     title: "easycommerce",
-    description: "ti racconto il progetto 2",
+    description: "ho creato una piattaforma e-commerce per aziende agricole",
   },
   {
-    logo: "",
     title: "ats",
-    description: "ti racconto il progetto 3",
+    description:
+      "ho sviluppato bot e strumenti a supporto per il trading automatico su forex",
   },
 ];

@@ -31,7 +31,6 @@ export default function Home() {
         {projects.map((project) => (
           <Project
             key={project.title}
-            logo={project.logo}
             title={project.title}
             description={project.description}
           />
