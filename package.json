@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "types": "tsc --noEmit"
   },
   "dependencies": {
     "@vercel/analytics": "^1.5.0",

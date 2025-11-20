@@ -9,54 +9,75 @@ This is a personal portfolio website for Clodi, a freelance product engineer bas
 ## Development Commands
 
 ```bash
-# Start development server (runs on http://localhost:3000)
-npm run dev
-
-# Build for production
-npm run build
-
-# Start production server (requires build first)
-npm start
+# Check for type errors (fast, no build)
+npm run types
 
 # Run ESLint
 npm run lint
+
+# Build for production (to run locally only for big changes)
+npm run build
 ```
 
 ## Architecture
 
 ### Framework & Routing
+
 - Uses Next.js App Router (`app/` directory)
 - Single-page application currently with just the home page at [app/page.tsx](app/page.tsx)
 - Root layout in [app/layout.tsx](app/layout.tsx) includes Vercel Analytics and Speed Insights
 
 ### Styling
+
 - Tailwind CSS 4 with custom inline theme configuration in [app/globals.css](app/globals.css)
-- Custom CSS variables: `--background` (#000000) and `--foreground` (#ffffff)
+- Custom CSS variables: `--background`, `--foreground`
 - Dark theme by default
 - Google Fonts loaded via Next.js font optimization in [lib/fonts.ts](lib/fonts.ts):
   - Rajdhani (sans-serif, weights: 300-700)
   - Space Mono (monospace, weights: 400, 700)
 
 ### Path Aliases
-- `@/*` maps to the root directory (configured in [tsconfig.json](tsconfig.json))
-- Example: `import { fontSans } from "@/lib/fonts"`
 
-### TypeScript Configuration
-- Strict mode enabled
-- Target: ES2017
-- Module resolution: bundler
-- JSX: react-jsx (React 19's automatic JSX transform)
+- `@/*` maps to the root directory
+- Example: `import { fontSans } from "@/lib/fonts"`
 
 ## Code Organization
 
 - `/app` - Next.js App Router pages and layouts
-- `/lib` - Shared utilities and configurations (currently only fonts)
-- `/public` - Static assets (currently empty)
-- ESLint configured with Next.js core-web-vitals and TypeScript presets
+- `/lib` - Shared utilities and configurations
+- `/public` - Static assets
 
-## Current State
+## Business Logic
 
-The application is in early development with placeholder content in Italian on the home page. The structure indicates plans for:
-- Logo and profile image display
-- Project showcase section (3 projects planned)
-- Email capture form
+### Home Page Structure
+
+The home page ([app/page.tsx](app/page.tsx)) is structured into four main sections:
+
+1. **Header Section**
+
+   - Logo
+   - Profile image + greeting ("HEY CIAO")
+
+2. **Introduction Section**
+
+   - Name introduction ("SONO CLODI")
+   - Tagline about creating custom tech projects
+
+3. **Projects Showcase**
+
+   - Section title ("MIEI PROGETTI")
+   - 3 project cards with title and description
+
+4. **Contact/CTA Section**
+   - Icon
+   - CTA text ("il prossimo potrebbe essere il tuo")
+   - Email input field
+   - Submit button
+
+Each section should be tackled and refined one at a time.
+
+## Maintaining This File
+
+After making significant changes to the codebase (new architecture patterns, business logics, major refactors, new conventions), review and update this CLAUDE.md file.
+
+Do not add information that can be easily discovered by reading configuration files or is self-evident from the code structure.
