@@ -9,14 +9,14 @@ export default function Home() {
       <Image src={logo} alt="Clodi Logo" width={40} />
       <div className="flex flex-col items-center gap-1">
         <div className="flex items-center gap-2">
-          <MyTitle first="HEY" second="CIAO" />
+          <MyTitle first="HEY" second="CIAO" as="h1" />
           <Image
             src={about}
             alt="Clodi About"
             width={50}
             className="rounded border-3 border-dark"
           />
-          <MyTitle first="SONO" second="CLODI" />
+          <MyTitle first="SONO" second="CLODI" as="h1" />
         </div>
         <p className="text-sm text-light">
           creo progetti tech su misura, con cura.
