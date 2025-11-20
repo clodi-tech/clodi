@@ -9,10 +9,10 @@ import { projects } from "@/lib/const";
 
 export default function Home() {
   return (
-    <main className="flex flex-col items-center min-h-screen p-10 gap-10">
+    <main className="flex flex-col items-center min-h-screen w-full max-w-lg mx-auto p-10 gap-10">
       <Image src={logo} alt="Clodi Logo" width={40} />
       <div className="flex flex-col items-center gap-1">
-        <div className="flex items-center gap-2">
+        <div className="flex items-end gap-2">
           <MyTitle first="HEY" second="CIAO" as="h1" />
           <Image
             src={about}
@@ -37,7 +37,7 @@ export default function Home() {
           />
         ))}
       </div>
-      <div className="flex flex-col items-center gap-1">
+      <div className="flex flex-col items-center gap-1 w-full">
         <Image src={icon} alt="Heart Handshake Icon" width={24} height={24} />
         <p className="text-mid">il prossimo potrebbe essere il tuo.</p>
         <EmailForm />

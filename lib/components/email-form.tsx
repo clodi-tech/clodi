@@ -8,13 +8,16 @@ export default function EmailForm() {
   const [state, formAction, pending] = useActionState(submitEmail, null);
 
   return (
-    <Form action={formAction} className="flex flex-col items-center gap-2">
+    <Form
+      action={formAction}
+      className="flex flex-col items-center gap-2 w-full"
+    >
       {state && state?.success ? (
         <p className="text-sm text-light">ti ricontatto presto!</p>
       ) : (
         <>
-          <label className="flex flex-col text-light">
-            ti ricontatto io tramite email
+          <label className="flex flex-col text-center text-light w-full">
+            lasciami la tua email, ti ricontatto io
             <input
               type="email"
               name="email"
@@ -26,7 +29,7 @@ export default function EmailForm() {
           </label>
           <button
             disabled={pending}
-            className="px-2 py-1 text-sm rounded border bg-foreground text-background w-full hover:bg-light transition-colors disabled:opacity-50"
+            className="px-2 py-1 text-sm rounded border bg-foreground text-background hover:bg-light transition-colors disabled:opacity-50"
           >
             {pending ? "invio..." : "invia"}
           </button>
