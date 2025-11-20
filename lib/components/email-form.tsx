@@ -9,24 +9,28 @@ export default function EmailForm() {
 
   return (
     <Form action={formAction} className="flex flex-col items-center gap-2">
-      <label className="flex flex-col text-light">
-        ti ricontatto io tramite email
-        <input
-          type="email"
-          name="email"
-          required
-          className="px-2 py-1 rounded border focus:outline-none focus:ring-2 focus:ring-mid"
-          disabled={pending}
-        />
-      </label>
-      <button
-        disabled={pending}
-        className="px-2 py-1 text-sm rounded border bg-foreground text-background w-full hover:bg-light transition-colors disabled:opacity-50"
-      >
-        {pending ? "invio..." : "invia"}
-      </button>
-      {state?.success && (
+      {state && state?.success ? (
         <p className="text-sm text-light">ti ricontatto presto!</p>
+      ) : (
+        <>
+          <label className="flex flex-col text-light">
+            ti ricontatto io tramite email
+            <input
+              type="email"
+              name="email"
+              required
+              className="px-2 py-1 rounded border focus:outline-none focus:ring-2 focus:ring-mid"
+              disabled={pending}
+              placeholder="inserisci la tua email"
+            />
+          </label>
+          <button
+            disabled={pending}
+            className="px-2 py-1 text-sm rounded border bg-foreground text-background w-full hover:bg-light transition-colors disabled:opacity-50"
+          >
+            {pending ? "invio..." : "invia"}
+          </button>
+        </>
       )}
     </Form>
   );
