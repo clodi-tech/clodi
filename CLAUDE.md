@@ -48,11 +48,9 @@ npm run build
 - `/app` - Next.js App Router pages and layouts
 - `/lib` - Shared utilities and configurations
   - `/lib/components` - Reusable React components
+  - `/lib/types.ts` - TypeScript type and interface definitions
+  - `/lib/const.ts` - Application constants and data
 - `/public` - Static assets
-
-### Components
-
-- **MyTitle** ([lib/components/my-title.tsx](lib/components/my-title.tsx)) - Signature title component with two-word styling (first word gray-mid, second word white, uppercase, semibold). Accepts optional `as` prop for semantic heading levels (h1-h4), defaults to h2.
 
 ## Business Logic
 
@@ -62,7 +60,7 @@ The home page ([app/page.tsx](app/page.tsx)) is structured into four main sectio
 
 1. **Hero Section**
 
-   - Logo (centered)
+   - Logo
    - Horizontal layout: "HEY CIAO" + profile image + "SONO CLODI"
      - Uses `MyTitle` component for signature titles (first word in gray-mid, second word in white)
      - Profile image with rounded corners and dark border
@@ -70,8 +68,8 @@ The home page ([app/page.tsx](app/page.tsx)) is structured into four main sectio
 
 2. **Projects Showcase**
 
-   - Section title ("MIEI PROGETTI")
-   - 3 project cards with title and description
+   - Section title
+   - Dynamic list of project cards mapped from `projects` constant
 
 3. **Contact/CTA Section**
    - Icon

@@ -2,6 +2,8 @@ import Image from "next/image";
 import logo from "@/public/logo.png";
 import about from "@/public/about.jpeg";
 import MyTitle from "@/lib/components/my-title";
+import Project from "@/lib/components/project";
+import { projects } from "@/lib/const";
 
 export default function Home() {
   return (
@@ -24,18 +26,14 @@ export default function Home() {
       </div>
       <div className="flex flex-col items-center gap-2">
         <MyTitle first="MIEI" second="PROGETTI" as="h2" />
-        <div className="flex flex-col items-center">
-          <div>progetto 1</div>
-          <div>ti racconto il progetto 1</div>
-        </div>
-        <div className="flex flex-col items-center">
-          <div>progetto 2</div>
-          <div>ti racconto il progetto 2</div>
-        </div>
-        <div className="flex flex-col items-center">
-          <div>progetto 3</div>
-          <div>ti racconto il progetto 3</div>
-        </div>
+        {projects.map((project) => (
+          <Project
+            key={project.title}
+            logo={project.logo}
+            title={project.title}
+            description={project.description}
+          />
+        ))}
       </div>
       <div className="flex flex-col items-center gap-1">
         <div>icona</div>
