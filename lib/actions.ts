@@ -1,15 +1,24 @@
 "use server";
 
 export async function submitEmail(
-  prevState: { success: boolean; message: string } | null,
+  prevState: { success: boolean } | null,
   formData: FormData
 ) {
   const email = formData.get("email");
 
-  console.log("Email submitted:", email);
+  const message = `Email submitted: ${email}`;
 
-  // One second delay
-  await new Promise((resolve) => setTimeout(resolve, 1000));
+  const response = await fetch(
+    `https://api.telegram.org/bot${process.env.TELEGRAM_BOT_TOKEN}/sendMessage`,
+    {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        chat_id: process.env.TELEGRAM_CHAT_ID,
+        text: message,
+      }),
+    }
+  );
 
-  return { success: true, message: "ok" };
+  return { success: true };
 }
