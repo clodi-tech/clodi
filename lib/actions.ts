@@ -20,5 +20,10 @@ export async function submitEmail(
     }
   );
 
+  if (!response.ok) {
+    console.error(response);
+    return { success: false };
+  }
+
   return { success: true };
 }
