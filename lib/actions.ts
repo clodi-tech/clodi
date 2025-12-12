@@ -1,10 +1,11 @@
 "use server";
+import { Resend } from "resend";
 
 export async function submitEmail(
   prevState: { success: boolean } | null,
   formData: FormData
 ) {
-  const email = formData.get("email");
+  const email = formData.get("email") as string;
 
   const message = `Clodi Tech | new prospect: ${email}`;
 
@@ -24,6 +25,18 @@ export async function submitEmail(
     console.error(response);
     return { success: false };
   }
+
+  const resend = new Resend(process.env.RESEND_API_KEY);
+  const segmentId = process.env.RESEND_SEGMENT_ID!;
+
+  await resend.contacts.create({
+    email,
+  });
+
+  await resend.contacts.segments.add({
+    email,
+    segmentId,
+  });
 
   return { success: true };
 }
