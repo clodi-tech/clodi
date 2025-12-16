@@ -15,8 +15,10 @@ export default function EmailForm() {
       {state && state?.success ? (
         <p className="text-light">super, ti scrivo presto!</p>
       ) : (
-        <label className="flex flex-col items-center gap-2 w-full text-center text-light">
-          lasciami la tua email, ti ricontatto io
+        <label className="flex flex-col items-center gap-2 w-full text-center text-light font-medium">
+          per training - workshops - consulenza - soluzioni custom
+          <br />
+          lasciami la tua email, ti contatto io
           <div className="flex gap-2 w-full">
             <input
               type="email"
@@ -28,9 +30,9 @@ export default function EmailForm() {
             />
             <button
               disabled={pending}
-              className="px-4 py-1 text-sm rounded border bg-foreground text-background hover:bg-light transition-colors disabled:opacity-50 whitespace-nowrap"
+              className="px-4 py-1 text-sm rounded border border-mid bg-foreground text-background font-bold hover:bg-light transition-colors disabled:opacity-50 whitespace-nowrap"
             >
-              {pending ? "invio..." : "invia"}
+              invia
             </button>
           </div>
         </label>

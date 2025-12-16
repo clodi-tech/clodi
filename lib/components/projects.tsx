@@ -13,7 +13,7 @@ export default function Projects() {
           <div key={project.title} className="flex items-center gap-1">
             <button
               onClick={() => setSelectedIndex(index)}
-              className={`transition-colors ${
+              className={`transition-colors font-medium ${
                 selectedIndex === index
                   ? "text-foreground underline underline-offset-1"
                   : "text-dark hover:text-mid"
@@ -27,7 +27,7 @@ export default function Projects() {
           </div>
         ))}
       </div>
-      <p className="text-center text-balance text-light h-16">
+      <p className="text-center text-balance text-light font-medium h-16">
         {projects[selectedIndex].description}
       </p>
     </div>

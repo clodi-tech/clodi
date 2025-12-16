@@ -21,7 +21,7 @@ export default function Home() {
           />
           <MyTitle first="SONO" second="CLODI" as="h1" />
         </div>
-        <p className="text-sm text-light">
+        <p className="text-sm text-light font-medium">
           creo progetti tech su misura, con cura.
         </p>
       </div>
@@ -32,10 +32,7 @@ export default function Home() {
       <div className="flex flex-col items-center gap-1 w-full">
         <Image src={icon} alt="Heart Handshake Icon" width={24} height={24} />
         <MyTitle first="IL" second="PROSSIMO" as="h2" />
-        <p className="text-light">potrebbe essere il tuo!</p>
-        <p className="text-mid">
-          per training - workshops - consulenza - soluzioni custom
-        </p>
+        <p className="text-mid font-semibold">potrebbe essere il tuo!</p>
         <EmailForm />
       </div>
     </main>
