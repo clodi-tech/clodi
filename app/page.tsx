@@ -3,9 +3,8 @@ import logo from "@/public/logo.png";
 import about from "@/public/about.jpeg";
 import icon from "@/public/icon.svg";
 import MyTitle from "@/lib/components/my-title";
-import Project from "@/lib/components/project";
+import Projects from "@/lib/components/projects";
 import EmailForm from "@/lib/components/email-form";
-import { projects } from "@/lib/const";
 
 export default function Home() {
   return (
@@ -28,13 +27,7 @@ export default function Home() {
       </div>
       <div className="flex flex-col items-center gap-2">
         <MyTitle first="MIEI" second="PROGETTI" as="h2" />
-        {projects.map((project) => (
-          <Project
-            key={project.title}
-            title={project.title}
-            description={project.description}
-          />
-        ))}
+        <Projects />
       </div>
       <div className="flex flex-col items-center gap-1 w-full">
         <Image src={icon} alt="Heart Handshake Icon" width={24} height={24} />
