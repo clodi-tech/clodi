@@ -31,7 +31,8 @@ export default function Home() {
       </div>
       <div className="flex flex-col items-center gap-1 w-full">
         <Image src={icon} alt="Heart Handshake Icon" width={24} height={24} />
-        <p className="text-mid">il prossimo potrebbe essere il tuo.</p>
+        <MyTitle first="IL" second="PROSSIMO" as="h2" />
+        <p className="text-mid">potrebbe essere il tuo.</p>
         <EmailForm />
       </div>
     </main>
