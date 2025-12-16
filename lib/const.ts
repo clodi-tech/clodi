@@ -24,4 +24,12 @@ export const projects: Project[] = [
     description:
       "ho sviluppato bot e strumenti a supporto per il trading automatico su forex",
   },
+  {
+    title: "bancaprogetto",
+    description: "digital project manager",
+  },
+  {
+    title: "oracle",
+    description: "senior consultant",
+  },
 ];
