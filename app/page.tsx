@@ -32,7 +32,10 @@ export default function Home() {
       <div className="flex flex-col items-center gap-1 w-full">
         <Image src={icon} alt="Heart Handshake Icon" width={24} height={24} />
         <MyTitle first="IL" second="PROSSIMO" as="h2" />
-        <p className="text-mid">potrebbe essere il tuo.</p>
+        <p className="text-light">potrebbe essere il tuo!</p>
+        <p className="text-mid">
+          per training - workshops - consulenza - soluzioni custom
+        </p>
         <EmailForm />
       </div>
     </main>
