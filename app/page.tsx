@@ -1,5 +1,4 @@
 import Image from "next/image";
-import logo from "@/public/logo.png";
 import about from "@/public/about.jpeg";
 import icon from "@/public/icon.svg";
 import MyTitle from "@/lib/components/my-title";
@@ -9,29 +8,27 @@ import EmailForm from "@/lib/components/email-form";
 export default function Home() {
   return (
     <main className="flex flex-col items-center min-h-screen w-full max-w-lg mx-auto p-10 gap-10">
-      <Image src={logo} alt="Clodi Logo" width={40} />
-      <div className="flex flex-col items-center gap-1">
-        <div className="flex items-end gap-2">
-          <MyTitle first="HEY" second="CIAO" as="h1" />
-          <Image
-            src={about}
-            alt="Clodi About"
-            width={50}
-            className="rounded border-3 border-dark"
-          />
-          <MyTitle first="SONO" second="CLODI" as="h1" />
+      <header className="flex flex-col items-center gap-3 w-full">
+        <Image
+          src={about}
+          alt="Claudio Callegari"
+          width={80}
+          height={80}
+          className="rounded-full"
+        />
+        <div className="flex flex-col items-center gap-0.5">
+          <MyTitle first="callegari" second="claudio" as="h1" />
+          <p className="text-light font-medium">freelance solution architect</p>
+          <p className="text-sm text-mid font-normal">varzi, pianeta terra</p>
         </div>
-        <p className="text-sm text-light font-medium">
-          creo progetti tech su misura, con cura.
-        </p>
-      </div>
+      </header>
       <div className="flex flex-col items-center gap-2">
-        <MyTitle first="MIEI" second="PROGETTI" as="h2" />
+        <MyTitle first="miei" second="progetti" as="h2" />
         <Projects />
       </div>
       <div className="flex flex-col items-center gap-1 w-full">
         <Image src={icon} alt="Heart Handshake Icon" width={24} height={24} />
-        <MyTitle first="IL" second="PROSSIMO" as="h2" />
+        <MyTitle first="il" second="prossimo" as="h2" />
         <p className="text-mid font-semibold">potrebbe essere il tuo!</p>
         <EmailForm />
       </div>
