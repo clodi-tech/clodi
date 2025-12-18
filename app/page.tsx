@@ -32,6 +32,24 @@ export default function Home() {
         <p className="text-mid font-semibold">potrebbe essere il tuo!</p>
         <EmailForm />
       </div>
+      <div className="flex items-center gap-4">
+        <a
+          href="https://instagram.com/clodi_tech"
+          target="_blank"
+          rel="noopener"
+          className="text-mid text-sm font-medium hover:text-light transition-colors"
+        >
+          instagram
+        </a>
+        <a
+          href="https://www.linkedin.com/in/claudio-calle/"
+          target="_blank"
+          rel="noopener"
+          className="text-mid text-sm font-medium hover:text-light transition-colors"
+        >
+          linkedin
+        </a>
+      </div>
     </main>
   );
 }
